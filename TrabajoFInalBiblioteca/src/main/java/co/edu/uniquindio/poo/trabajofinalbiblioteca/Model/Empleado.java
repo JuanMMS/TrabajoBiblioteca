@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 
-public class Empleado {
+public abstract class Empleado {
     private String nombre;
     private String id;
     private String correo;
@@ -15,6 +15,7 @@ public class Empleado {
         this.contrasena = contrasena;
     }
 
+    public abstract String generarReporte(String idPrestamo);
 
     /**
      * Creación de los métodos getter y setter de losatributos de la clase Empleado
