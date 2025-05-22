@@ -3,7 +3,7 @@ package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Biblioteca {
+public class Biblioteca implements NuevoLibro{
     private String nombre;
     private String id;
     private String direccion;
@@ -23,6 +23,32 @@ public class Biblioteca {
         this.listLibros = new ArrayList<>();
         this.listEmpleados = new ArrayList<>();
     }
+
+/**
+ * CRUD EMPLEADO
+ */
+
+    public String visualizarEmpleado(Empleado empleado){
+        return empleado.toString();
+    }
+    public void actualizarEmpleado(Empleado empleado, String nombre, String id, String correo){
+        empleado.setNombre(nombre);
+        empleado.setId(id);
+        empleado.setCorreo(correo);
+    }
+    public void eliminarEmpleado(Empleado empleado){
+        listEmpleados.remove(empleado);
+    }
+
+    /**
+     * CRUD LIBROS
+     * @param libro
+     */
+    @Override
+    public void AgregarLibro(Libro libro) {
+        listLibros.add(libro);
+    }
+
 
     /**
      * Creación de métodos getter y setters de los metodos de Biblioteca
@@ -67,4 +93,6 @@ public class Biblioteca {
     public void setListEmpleados(List<Empleado> listEmpleados) {
         this.listEmpleados = listEmpleados;
     }
+
+
 }
