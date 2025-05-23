@@ -14,5 +14,10 @@ public class Bibliotecario extends Empleado {
         super(nombre, id, correo,usuario, contrasena);
     }
 
+    public String generarReporte() {
+        String reporte = "";
+        for(Prestamo prestamo : getListPrestamosBibliotecario()){
+        }
+    }
 
 }

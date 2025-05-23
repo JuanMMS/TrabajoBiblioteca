@@ -1,11 +1,15 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Empleado {
     private String nombre;
     private String id;
     private String correo;
     private String usuario;
     private String contrasena;
+    private List<Prestamo> listPrestamosBibliotecario;
 
 
     /**
@@ -22,9 +26,10 @@ public abstract class Empleado {
         this.correo = correo;
         this.usuario = usuario;
         this.contrasena = contrasena;
+        this.listPrestamosBibliotecario = new ArrayList<>();
     }
 
-    public abstract String generarReporte(String idPrestamo);
+    public abstract String generarReporte();
 
     /**
      * Creación de los métodos getter y setter de losatributos de la clase Empleado
@@ -69,4 +74,8 @@ public abstract class Empleado {
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
+
+    public List<Prestamo> getListPrestamosBibliotecario() {return listPrestamosBibliotecario;}
+
+    public void setListPrestamosBibliotecario(List<Prestamo> listPrestamosBibliotecario) {this.listPrestamosBibliotecario = listPrestamosBibliotecario;}
 }
