@@ -16,10 +16,9 @@ public class Administrador extends Empleado implements GestionEmpleados {
     }
 
     @Override
-    public void agregarEmpleado(Biblioteca biblioteca, Empleado empleado){
-        biblioteca.getListEmpleados;
+    public void agregarEmpleado(Empleado empleado){
+        biblioteca.agregarEmpleado(empleado);
     }
-
     @Override
     public String visualizarEmpleado(Empleado empleado){
         return empleado.toString();
