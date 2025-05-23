@@ -8,6 +8,7 @@ public class Persona {
     public Persona(String nombre, String id) {
         this.nombre = nombre;
         this.id = id;
+        this.thePrestamo = null;
     }
 
     /**
