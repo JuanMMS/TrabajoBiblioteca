@@ -1,14 +1,16 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 
+import java.util.List;
+
 public class Persona {
     private String nombre;
     private String id;
-    private Prestamo thePrestamo;
+    private List<Prestamo> listPrestamosPersona;
 
     public Persona(String nombre, String id) {
         this.nombre = nombre;
         this.id = id;
-        this.thePrestamo = null;
+        this.listPrestamosPersona = null;
     }
 
     /**
@@ -31,11 +33,11 @@ public class Persona {
         this.id = id;
     }
 
-    public Prestamo getThePrestamo() {
-        return thePrestamo;
+    public List<Prestamo> getListPrestamosPersona() {
+        return listPrestamosPersona;
     }
 
-    public void setThePrestamo(Prestamo thePrestamo) {
-        this.thePrestamo = thePrestamo;
+    public void setListPrestamosPersona(List<Prestamo> listPrestamosPersona) {
+        this.listPrestamosPersona = listPrestamosPersona;
     }
 }
