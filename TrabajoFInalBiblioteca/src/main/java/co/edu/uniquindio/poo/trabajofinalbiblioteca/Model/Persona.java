@@ -3,11 +3,14 @@ package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 import java.util.List;
 
 public class Persona {
+    private Biblioteca biblioteca;
     private String nombre;
     private String id;
     private List<Prestamo> listPrestamosPersona;
 
-    public Persona(String nombre, String id) {
+
+    public Persona(Biblioteca biblioteca, String nombre, String id) {
+        this.biblioteca = biblioteca;
         this.nombre = nombre;
         this.id = id;
         this.listPrestamosPersona = null;
