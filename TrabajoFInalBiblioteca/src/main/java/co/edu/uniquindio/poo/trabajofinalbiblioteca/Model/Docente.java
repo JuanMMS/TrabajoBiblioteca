@@ -3,7 +3,7 @@ package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 public class Docente extends Persona{
 
     /**
-     * Creación
+     * Creación metodo constructor clase Persona
      * @param nombre
      * @param id
      */
