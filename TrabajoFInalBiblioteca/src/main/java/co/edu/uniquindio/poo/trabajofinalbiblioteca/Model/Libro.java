@@ -5,6 +5,7 @@ public class Libro {
     protected String autor;
     protected int anioPublicacion;
     protected boolean disponibilidad;
+    private Prestamo thePrestamoLibro;
 
     /**
      * Metodo constructor de la clase padre Libro
@@ -56,6 +57,12 @@ public class Libro {
         this.disponibilidad = disponibilidad;
     }
 
+    public Prestamo getThePrestamoLibro() {
+        return thePrestamoLibro;
+    }
 
+    public void setThePrestamoLibro(Prestamo thePrestamoLibro) {
+        this.thePrestamoLibro = thePrestamoLibro;
+    }
 }
 
