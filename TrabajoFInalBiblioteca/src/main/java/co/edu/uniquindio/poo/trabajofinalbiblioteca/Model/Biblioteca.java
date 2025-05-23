@@ -3,12 +3,14 @@ package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Biblioteca implements NuevoLibro{
+public class Biblioteca implements NuevoLibro, GestionEmpleados{
     private String nombre;
     private String id;
     private String direccion;
     private List<Libro> listLibros;
     private List<Empleado> listEmpleados;
+    private List<Persona> listPersonas;
+
 
     /**
      * Creación metodo constructor de la clase Biblioteca
@@ -27,29 +29,44 @@ public class Biblioteca implements NuevoLibro{
 /**
  * CRUD EMPLEADO
  */
-
+    @Override
+    public void agregarEmpleado(Empleado empleado){
+        this.listEmpleados.add(empleado);
+    }
+    @Override
     public String visualizarEmpleado(Empleado empleado){
         return empleado.toString();
     }
+    @Override
     public void actualizarEmpleado(Empleado empleado, String nombre, String id, String correo){
         empleado.setNombre(nombre);
         empleado.setId(id);
         empleado.setCorreo(correo);
     }
+    @Override
     public void eliminarEmpleado(Empleado empleado){
         listEmpleados.remove(empleado);
     }
 
     /**
      * CRUD LIBROS
-     * @param libro
      */
     @Override
     public void AgregarLibro(Libro libro) {
         listLibros.add(libro);
     }
-
-
+    public String visualizarLibro(Libro libro){
+    return libro.toString();
+    }
+    public void actualizarLibro(Libro libro, String nombre, String autor, int anioPublicacion, boolean disponibilidad){
+    libro.setNombre(nombre);
+    libro.setAutor(autor);
+    libro.setAnioPublicacion(anioPublicacion);
+    libro.setDisponibilidad(disponibilidad);
+    }
+    public void eliminarEmpleado(Libro libro){
+    listLibros.remove(libro);
+    }
     /**
      * Creación de métodos getter y setters de los metodos de Biblioteca
      * @return
