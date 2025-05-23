@@ -14,12 +14,12 @@ public class Biblioteca implements NuevoLibro, GestionEmpleados{
 
     /**
      * Creación metodo constructor de la clase Biblioteca
-     * @param nobre
+     * @param nombre
      * @param id
      * @param direccion
      */
-    public Biblioteca(String nobre, String id, String direccion){
-        this.nombre = nobre;
+    public Biblioteca(String nombre, String id, String direccion){
+        this.nombre = nombre;
         this.id = id;
         this.direccion = direccion;
         this.listLibros = new ArrayList<>();
