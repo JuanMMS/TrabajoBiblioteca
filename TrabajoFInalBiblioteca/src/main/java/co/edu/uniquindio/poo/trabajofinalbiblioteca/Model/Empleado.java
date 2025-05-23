@@ -7,6 +7,15 @@ public abstract class Empleado {
     private String usuario;
     private String contrasena;
 
+
+    /**
+     * Método constructor de la clase Empleado
+     * @param nombre
+     * @param id
+     * @param correo
+     * @param usuario
+     * @param contrasena
+     */
     public Empleado(String nombre, String id, String correo, String usuario, String contrasena) {
         this.nombre = nombre;
         this.id = id;

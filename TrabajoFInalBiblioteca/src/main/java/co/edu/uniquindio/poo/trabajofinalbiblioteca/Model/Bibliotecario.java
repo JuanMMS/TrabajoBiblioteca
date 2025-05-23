@@ -3,7 +3,7 @@ package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 public class Bibliotecario extends Empleado {
 
     /**
-     * Creación del m+etodo constructor de la clase Bibliotecario
+     * Creación del método constructor de la clase Bibliotecario
      * @param nombre
      * @param id
      * @param correo
