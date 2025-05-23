@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Empleado {
-    private Biblioteca biblioteca;
+    protected Biblioteca biblioteca;
     private String nombre;
     private String id;
     private String correo;
@@ -32,7 +32,7 @@ public abstract class Empleado {
         this.listPrestamosBibliotecario = new ArrayList<>();
     }
 
-    public abstract String generarReporte();
+    public abstract StringBuilder generarReporte();
 
     /**
      * Creación de los métodos getter y setter de losatributos de la clase Empleado
