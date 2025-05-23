@@ -1,7 +1,10 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 
-public class Bibliotecario extends Empleado {
+import java.util.ArrayList;
+import java.util.List;
 
+public class Bibliotecario extends Empleado {
+    private List<Prestamo> listPrestamosBibliotecario;
     /**
      * Creación del método constructor de la clase Bibliotecario
      * @param nombre
@@ -10,14 +13,22 @@ public class Bibliotecario extends Empleado {
      * @param usuario
      * @param contrasena
      */
-    public Bibliotecario(String nombre, String id, String correo, String usuario, String contrasena){
-        super(nombre, id, correo,usuario, contrasena);
+    public Bibliotecario(Biblioteca biblioteca, String nombre, String id, String correo, String usuario, String contrasena){
+        super(biblioteca, nombre, id, correo,usuario, contrasena);
+        this.listPrestamosBibliotecario = new ArrayList<>();
     }
 
-    public String generarReporte() {
-        String reporte = "";
+    /**
+     * Metodo que genera un reporte de los libros prestados por bibliotecario
+     * @return
+     */
+
+    public String generarReporteLibrosPrestados() {
+            StringBuilder reporte = new StringBuilder();
         for(Prestamo prestamo : getListPrestamosBibliotecario()){
+            reporte.append(prestamo.toString()).append("\n");
         }
+        return reporte.toString();
     }
 
 }
