@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Empleado {
+    private Biblioteca biblioteca;
     private String nombre;
     private String id;
     private String correo;
@@ -14,13 +15,15 @@ public abstract class Empleado {
 
     /**
      * Método constructor de la clase Empleado
+     * @param biblioteca
      * @param nombre
      * @param id
      * @param correo
      * @param usuario
      * @param contrasena
      */
-    public Empleado(String nombre, String id, String correo, String usuario, String contrasena) {
+    public Empleado(Biblioteca biblioteca, String nombre, String id, String correo, String usuario, String contrasena) {
+        this.biblioteca = biblioteca;
         this.nombre = nombre;
         this.id = id;
         this.correo = correo;
