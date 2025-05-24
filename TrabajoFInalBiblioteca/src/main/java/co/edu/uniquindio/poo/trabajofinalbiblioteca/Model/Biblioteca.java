@@ -30,21 +30,22 @@ public class Biblioteca implements NuevoLibro, GestionEmpleados{
  * CRUD EMPLEADO
  */
     @Override
-    public void agregarEmpleado(Empleado empleado){
+    public void agregarEmpleado(Biblioteca biblioteca, Empleado empleado){
         this.listEmpleados.add(empleado);
     }
     @Override
-    public String visualizarEmpleado(Empleado empleado){
+    public String visualizarEmpleado(Biblioteca biblioteca, Empleado empleado){
         return empleado.toString();
     }
     @Override
-    public void actualizarEmpleado(Empleado empleado, String nombre, String id, String correo){
+    public void actualizarEmpleado(Biblioteca biblioteca, Empleado empleado, String nombre, String id, String correo){
         empleado.setNombre(nombre);
         empleado.setId(id);
         empleado.setCorreo(correo);
     }
+
     @Override
-    public void eliminarEmpleado(Empleado empleado){
+    public void eliminarEmpleado(Biblioteca biblioteca, Empleado empleado){
         listEmpleados.remove(empleado);
     }
 

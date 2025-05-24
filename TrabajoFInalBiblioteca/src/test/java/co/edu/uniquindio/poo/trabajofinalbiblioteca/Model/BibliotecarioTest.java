@@ -20,7 +20,7 @@ class BibliotecarioTest {
     void generarReporteTest() {
         // Crear la biblioteca y el bibliotecario
         Biblioteca biblioteca1 = new Biblioteca("Casa", "1234", "Uniquindio");
-        Bibliotecario bibliotecario1 = new Bibliotecario(biblioteca1, "Pedro", "ABC", "Pedro123@uqvirtual.edu.co", "PedroM12", "12345");
+        Bibliotecario bibliotecario1 = new Bibliotecario("Pedro", "ABC", "Pedro123@uqvirtual.edu.co", "PedroM12", "12345");
 
         // Crear usuarios y libros
         Persona usuario1 = new Estudiante("Juan", "111");

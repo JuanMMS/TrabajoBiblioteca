@@ -10,8 +10,8 @@ public class Administrador extends Empleado implements GestionEmpleados {
      * @param contrasena
      */
 
-    public Administrador(Biblioteca biblioteca, String nombre, String id, String correo, String usuario, String contrasena){
-        super(biblioteca, nombre, id , correo,usuario, contrasena);
+    public Administrador(String nombre, String id, String correo, String usuario, String contrasena){
+        super(nombre, id , correo,usuario, contrasena);
     }
 
 
@@ -22,20 +22,21 @@ public class Administrador extends Empleado implements GestionEmpleados {
 
     @Override
     public void agregarEmpleado(Biblioteca biblioteca, Empleado empleado){
-        biblioteca.agregarEmpleado(empleado);
+        biblioteca.agregarEmpleado(biblioteca, empleado);
     }
     @Override
-    public String visualizarEmpleado(Empleado empleado){
+
+    public String visualizarEmpleado(Biblioteca biblioteca, Empleado empleado){
         return empleado.toString();
     }
     @Override
-    public void actualizarEmpleado(Empleado empleado, String nombre, String id, String correo){
+    public void actualizarEmpleado(Biblioteca biblioteca, Empleado empleado, String nombre, String id, String correo){
         empleado.setNombre(nombre);
         empleado.setId(id);
         empleado.setCorreo(correo);
     }
     @Override
-    public void eliminarEmpleado(Empleado empleado){
+    public void eliminarEmpleado(Biblioteca biblioteca, Empleado empleado){
         ;
     }
 
