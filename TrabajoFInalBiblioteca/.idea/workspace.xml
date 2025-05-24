@@ -9,8 +9,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Administrador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Bibliotecario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Bibliotecario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/NuevoLibro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/NuevoLibro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Prestamo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Prestamo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/BibliotecaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/BibliotecaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/BibliotecarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/BibliotecarioTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +19,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "JuanMMS"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/JuanMMS/TrabajoBiblioteca.git",
+    "accountId": "673e4e1a-aedc-4609-8778-5c6fea7f3d43"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2xXpDF5k3aOfmTr9PWrsRYN5Zr9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,9 +47,10 @@
   "keyToString": {
     "JUnit.BibliotecarioTest.executor": "Run",
     "JUnit.BibliotecarioTest.generarReporte.executor": "Run",
+    "JUnit.BibliotecarioTest.generarReporteTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev__juanjo",
+    "git-widget-placeholder": "dev__juanma",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -38,7 +60,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.BibliotecarioTest.generarReporte">
+  <component name="RunManager" selected="JUnit.BibliotecarioTest.generarReporteTest">
     <configuration name="BibliotecarioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrabajoFInalBiblioteca" />
       <extension name="coverage">
@@ -70,8 +92,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BibliotecarioTest.generarReporteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TrabajoFInalBiblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.BibliotecarioTest" />
+      <option name="METHOD_NAME" value="generarReporteTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BibliotecarioTest.generarReporteTest" />
         <item itemvalue="JUnit.BibliotecarioTest.generarReporte" />
         <item itemvalue="JUnit.BibliotecarioTest" />
       </list>
@@ -94,6 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1747970211924</updated>
       <workItem from="1747970214105" duration="3333000" />
+      <workItem from="1748094153398" duration="1446000" />
     </task>
     <servers />
   </component>

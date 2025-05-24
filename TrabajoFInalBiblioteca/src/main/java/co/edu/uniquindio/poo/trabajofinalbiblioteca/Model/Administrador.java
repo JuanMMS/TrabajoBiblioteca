@@ -16,7 +16,7 @@ public class Administrador extends Empleado implements GestionEmpleados {
 
 
     @Override
-    public StringBuilder generarReporte() {
+    public String generarReporte() {
         return null;
     }
 
