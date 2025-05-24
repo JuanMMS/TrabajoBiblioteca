@@ -37,7 +37,7 @@ public class Administrador extends Empleado implements GestionEmpleados {
     }
     @Override
     public void eliminarEmpleado(Biblioteca biblioteca, Empleado empleado){
-        ;
+        biblioteca.getListEmpleados().remove(empleado);
     }
 
 }
