@@ -8,7 +8,7 @@ public abstract class Empleado {
     private String id;
     private String correo;
     private String usuario;
-    private String contrasena;
+    private String contrasenia;
     private List<Prestamo> listPrestamosBibliotecario;
 
 
@@ -18,19 +18,25 @@ public abstract class Empleado {
      * @param id
      * @param correo
      * @param usuario
-     * @param contrasena
+     * @param contrasenia
      */
-    public Empleado(String nombre, String id, String correo, String usuario, String contrasena) {
+    public Empleado(String nombre, String id, String correo, String usuario, String contrasenia) {
         this.nombre = nombre;
         this.id = id;
         this.correo = correo;
         this.usuario = usuario;
-        this.contrasena = contrasena;
+        this.contrasenia = contrasenia;
         this.listPrestamosBibliotecario = new ArrayList<>();
     }
 
     public abstract String generarReporte();
 
+    /**
+     * Metodo de autenticacion
+     */
+    public boolean validarCredenciales(String usuario, String contrasenia) {
+        return this.usuario.equals(usuario) && this.contrasenia.equals(contrasenia);
+    }
     /**
      * Creación de los métodos getter y setter de losatributos de la clase Empleado
      * @return
@@ -67,12 +73,12 @@ public abstract class Empleado {
         this.usuario = usuario;
     }
 
-    public String getContrasena() {
-        return contrasena;
+    public String getContrasenia() {
+        return contrasenia;
     }
 
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+    public void setContrasenia(String contrasena) {
+        this.contrasenia = contrasenia;
     }
 
     public List<Prestamo> getListPrestamosBibliotecario() {return listPrestamosBibliotecario;}
