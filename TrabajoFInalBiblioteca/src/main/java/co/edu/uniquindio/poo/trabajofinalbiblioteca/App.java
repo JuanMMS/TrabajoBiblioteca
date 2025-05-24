@@ -2,6 +2,9 @@ package co.edu.uniquindio.poo.trabajofinalbiblioteca;
 
 import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,14 +17,22 @@ public class App extends Application {
     public void start(Stage primaryStage) throws IOException {
         this.primaryStage = primaryStage;
         primaryStage.setTitle("Biblioteca");
-        openViewPrincipal();
+
+        public void start(Stage primaryStage) throws IOException {
+            this.primaryStage = primaryStage;
+            primaryStage.setTitle("Biblioteca");
+            inicializarData();
+            openPrimaryView();
+        }
     }
 
-
-
-
-
-
+    private void openPrimaryView() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/PrimaryView.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
 
 
     //servicios, data basica para la función del programa
@@ -39,7 +50,16 @@ public class App extends Application {
         LibroFisico libroFisico3 = new LibroFisico("La ciudad y los perros", "Andres", 2001, 210, "Caracol", "A24");
         Prestamo prestamo1 = new Prestamo("1A2B", libroFisico1, 2, estudiante, bibliotecario);
         Prestamo prestamo2 = new Prestamo("2C,3D", libroFisico2, 1, estudiante, bibliotecario);
-
+        // Agregar empleados
+        biblioteca.agregarEmpleado(bibliotecario);
+        biblioteca.agregarEmpleado(admin);
+        // Agregar libros
+        biblioteca.agregarLibro(libroDigital);
+        biblioteca.agregarLibro(libroReferencia);
+        biblioteca.agregarLibro(libroFisico1);
+        biblioteca.agregarLibro(libroFisico2);
+        biblioteca.agregarLibro(libroFisico3);
+        // Si tienes listas para estudiantes/docentes/visitantes, agrégalos también si es necesario
         //FALTA AGREGAR LAS COSAS A BIBLIOTECA es decir agregar por medio del crud existente dentro de la biblioteca
 
 
