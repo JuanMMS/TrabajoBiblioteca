@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 class BibliotecarioTest {
 
-    @Test
+
 
    /** void generarReporteTest() {
         Biblioteca biblioteca1 = new Biblioteca("Casa", "1234", "Uniquindio");
@@ -17,6 +17,7 @@ class BibliotecarioTest {
 
 
 
+    @Test
     void generarReporteTest() {
         // Crear la biblioteca y el bibliotecario
         Biblioteca biblioteca1 = new Biblioteca("Casa", "1234", "Uniquindio");
@@ -24,9 +25,8 @@ class BibliotecarioTest {
 
         // Crear usuarios y libros
         Persona usuario1 = new Estudiante("Juan", "111");
-        Libro libro1 = new LibroFisico("Don Quijote", "Cervantes", 2000, 5500, "Filmore", "L2B");
-        Libro libro2 = new LibroFisico("1984", "Orwell", 1985, 422, "filmore", "L3B");
-        Libro libro3 = new LibroFisico("Mil Leguas", "Nunies", 1990, 2, "Perdon", "L34C");
+        LibroFisico libro1 = new LibroFisico("Don Quijote", "Cervantes", 2000, 5500, "Filmore", "L2B");
+        LibroFisico libro2 = new LibroFisico("1984", "Orwell", 1985, 422, "Filmore", "L3B");
 
         // Registrar préstamos
         Prestamo prestamo1 = new Prestamo("1", libro1, 5, usuario1, bibliotecario1);
@@ -37,17 +37,22 @@ class BibliotecarioTest {
         bibliotecario1.agregarPrestamo(prestamo2);
         bibliotecario1.agregarPrestamo(prestamo3);
 
+        // Marcar solo uno como devuelto (para que haya deuda)
+        prestamo1.setDevuelto(true); // este está devuelto
+        // prestamo2 y prestamo3 no se devuelven → generan deuda
+
         // Ejecutar reporte
         String reporte = bibliotecario1.generarReporte();
 
-        // Verificar contenido del reporte
-        assertTrue(reporte.contains("Reporte de prestamos de Pedro:"));
-        //assertTrue(reporte.contains("Don Quijote"));
-        //assertTrue(reporte.contains("1984"));
-        /** assertTrue(reporte.contains("Libros más prestados"));
-        assertTrue(reporte.contains("Veces prestado: 2")); // Don Quijote
-        assertTrue(reporte.contains("Veces prestado: 1")); // 1984
-         */
+        // Verificaciones
+        assertTrue(reporte.contains("Reporte de préstamos de Pedro:"));
+        assertTrue(reporte.contains("Don Quijote"));
+        assertTrue(reporte.contains("1984"));
 
+        assertTrue(reporte.contains("Libro más prestado: Don Quijote"));
+        assertTrue(reporte.contains("2 veces")); // Don Quijote fue prestado dos veces
+
+        assertTrue(reporte.contains("Usuarios con deudas:"));
+        assertTrue(reporte.contains("Juan")); // usuario con deuda
     }
 }

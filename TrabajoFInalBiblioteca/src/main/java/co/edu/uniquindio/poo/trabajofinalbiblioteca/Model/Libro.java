@@ -2,7 +2,7 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 
 public class Libro {
-    protected String nombre;
+    protected String titulo;
     protected String autor;
     protected int anioPublicacion;
     protected boolean disponibilidad;
@@ -10,13 +10,12 @@ public class Libro {
 
     /**
      * Metodo constructor de la clase padre Libro
-     * @param nombre
+     * @param Titulo
      * @param autor
      * @param anioPublicacion
-     * @param disponibilidad
      */
-    public Libro(String nombre, String autor, int anioPublicacion) {
-        this.nombre = nombre;
+    public Libro(String Titulo, String autor, int anioPublicacion) {
+        this.titulo = titulo;
         this.autor = autor;
         this.anioPublicacion = anioPublicacion;
         this.disponibilidad = true;
@@ -26,12 +25,12 @@ public class Libro {
      * Metodos getter y setter de la clase padre Libro
      * @return
      */
-    public String getNombre() {
-        return nombre;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setTitulo(String nombre) {
+        this.titulo = nombre;
     }
 
     public String getAutor() {

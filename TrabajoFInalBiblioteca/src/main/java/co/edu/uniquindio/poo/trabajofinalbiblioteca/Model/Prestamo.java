@@ -6,6 +6,7 @@ public class Prestamo   {
     private int duracion;
     private Persona persona;
     private Bibliotecario bibliotecario;
+    private boolean devuelto;
 
 
     /**
@@ -22,8 +23,16 @@ public class Prestamo   {
         this.duracion = duracion;
         this.persona = persona;
         this.bibliotecario = bibliotecario;
+        this.devuelto = false;
     }
 
+
+    /**
+     * Metodo de devolucion de prestamo
+     */
+    public void devolverLibro(){
+        this.devuelto = true;
+    }
 
     /**
      * Creación métodos Getter y Setter de la clase Prestamo
@@ -69,6 +78,14 @@ public class Prestamo   {
         this.bibliotecario = bibliotecario;
     }
 
+    public boolean isDevuelto() {
+        return devuelto;
+    }
+
+    public void setDevuelto(boolean devuelto) {
+        this.devuelto = devuelto;
+    }
+
     @Override
     public String toString() {
         return "Prestamo{" +
@@ -76,6 +93,8 @@ public class Prestamo   {
                 ", libro=" + libro +
                 ", duracion=" + duracion +
                 ", persona=" + persona +
+                ", bibliotecario=" + bibliotecario +
+                ", devuelto=" + devuelto +
                 '}' + "\n";
     }
 }

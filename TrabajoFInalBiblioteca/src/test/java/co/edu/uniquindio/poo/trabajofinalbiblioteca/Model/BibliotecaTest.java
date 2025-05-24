@@ -10,7 +10,7 @@ class BibliotecaTest {
     void agregarEmpleadoTest() {
         Biblioteca biblioteca = new Biblioteca("Los libres", "123A", "Cra 4, Mz 20");
         Empleado empleado = new Bibliotecario("Juan José", "10987", "juanjo@gmail.com", "JuanJ22", "ABCD123");
-        biblioteca.agregarEmpleado(biblioteca, empleado);
+        biblioteca.agregarEmpleado(empleado);
         assertTrue(biblioteca.getListEmpleados().contains(empleado));
     }
 

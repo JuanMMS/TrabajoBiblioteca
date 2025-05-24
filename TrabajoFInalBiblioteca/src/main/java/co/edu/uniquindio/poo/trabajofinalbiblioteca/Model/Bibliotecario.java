@@ -3,7 +3,7 @@ package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bibliotecario extends Empleado {
+public class Bibliotecario extends Empleado implements GestionLibro{
     private List<Prestamo> listPrestamosBibliotecario;
 
     /**
@@ -20,13 +20,62 @@ public class Bibliotecario extends Empleado {
         this.listPrestamosBibliotecario = new ArrayList<>();
     }
 
-    public String generarReporte(){
-        String reporte = "Reporte de prestamos de "+ getNombre() +":\n";
-        for(Prestamo prestamo : listPrestamosBibliotecario){
-            reporte += prestamo.toString();
+    /**
+     * Metodo para agregar un libro a la biblioteca
+     */
+    @Override
+    public void agregarLibro(Libro libro) {
+
+    }
+    /**
+     * Metodo para devolver un libro prestado
+     */
+    @Override
+    public void devolverLibro(Prestamo prestamo) {
+        prestamo.devolverLibro();
+    }
+
+    /**
+     * Metodo de bibliotecario para generar reportes
+     * @return
+     */
+    public String generarReporte() {
+        String reporte = "Reporte de préstamos de " + getNombre() + ":\n";
+        LibroFisico libroMasPrestado = null;
+        List<Persona> listUsuariosConDeuda = new ArrayList<>();
+
+        for (Prestamo prestamo : listPrestamosBibliotecario) {
+            reporte += prestamo.toString() + "\n";
+
+            // Obtener el libro más prestado por el bibliotecario
+            if (prestamo.getLibro() instanceof LibroFisico) {
+                LibroFisico libro = (LibroFisico) prestamo.getLibro();
+                if (libroMasPrestado == null || libro.getVecesPrestado() > libroMasPrestado.getVecesPrestado()) {
+                    libroMasPrestado = libro;
+                }
+            }
+            // Agregar personas con deuda por tener libros prestados
+            Persona persona = prestamo.getPersona();
+            if (!prestamo.isDevuelto() && !listUsuariosConDeuda.contains(persona)) {
+                listUsuariosConDeuda.add(persona);
+            }
+        }
+
+        if (libroMasPrestado != null) {
+            reporte += "\nLibro más prestado: " + libroMasPrestado.getTitulo() +
+                    " (" + libroMasPrestado.getVecesPrestado() + " veces)\n";
+        } else {
+            reporte += "\nNo se encontraron préstamos.\n";
+        }
+        reporte += "\nUsuarios con deudas:\n";
+        if (listUsuariosConDeuda.isEmpty()) {
+            reporte += "- No hay usuarios con deudas.\n";
+        } else {
+            for (Persona persona : listUsuariosConDeuda) {
+                reporte += "- " + persona.getNombre() + "\n";
+            }
         }
         return reporte;
-
     }
 
     /**
@@ -49,5 +98,7 @@ public class Bibliotecario extends Empleado {
     public void setListPrestamosBibliotecario(List<Prestamo> listPrestamosBibliotecario) {
         this.listPrestamosBibliotecario = listPrestamosBibliotecario;
     }
+
+
 }
 
