@@ -11,13 +11,12 @@ public class LibroFisico extends Libro {
      * @param nombre
      * @param autor
      * @param anioPublicacion
-     * @param disponibilidad
      * @param numeroPaginas
      * @param editorial
      * @param ubicacion
      */
-    public LibroFisico(String nombre, String autor, int anioPublicacion, boolean disponibilidad, int numeroPaginas, String editorial, String ubicacion) {
-        super(nombre, autor, anioPublicacion, disponibilidad);
+    public LibroFisico(String nombre, String autor, int anioPublicacion, int numeroPaginas, String editorial, String ubicacion) {
+        super(nombre, autor, anioPublicacion);
         this.numeroPaginas = numeroPaginas;
         this.editorial = editorial;
         this.ubicacion = ubicacion;

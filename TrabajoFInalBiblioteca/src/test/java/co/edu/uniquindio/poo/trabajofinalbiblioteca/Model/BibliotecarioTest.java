@@ -24,9 +24,9 @@ class BibliotecarioTest {
 
         // Crear usuarios y libros
         Persona usuario1 = new Estudiante("Juan", "111");
-        Libro libro1 = new LibroFisico("Don Quijote", "Cervantes", 2000, true, 5500, "Filmore", "L2B");
-        Libro libro2 = new LibroFisico("1984", "Orwell", 1985, true, 422, "filmore", "L3B");
-        Libro libro3 = new LibroFisico("Mil Leguas", "Nunies", 1990, true, 2, "Perdon", "L34C");
+        Libro libro1 = new LibroFisico("Don Quijote", "Cervantes", 2000, 5500, "Filmore", "L2B");
+        Libro libro2 = new LibroFisico("1984", "Orwell", 1985, 422, "filmore", "L3B");
+        Libro libro3 = new LibroFisico("Mil Leguas", "Nunies", 1990, 2, "Perdon", "L34C");
 
         // Registrar préstamos
         Prestamo prestamo1 = new Prestamo("1", libro1, 5, usuario1, bibliotecario1);

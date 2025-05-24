@@ -15,11 +15,11 @@ public class Libro {
      * @param anioPublicacion
      * @param disponibilidad
      */
-    public Libro(String nombre, String autor, int anioPublicacion, boolean disponibilidad) {
+    public Libro(String nombre, String autor, int anioPublicacion) {
         this.nombre = nombre;
         this.autor = autor;
         this.anioPublicacion = anioPublicacion;
-        this.disponibilidad = disponibilidad;
+        this.disponibilidad = true;
     }
 
     /**
