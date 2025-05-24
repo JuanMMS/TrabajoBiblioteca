@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c12cc6df-be2a-4094-9b79-21ab26fe380e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/App/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Libro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/LibroDigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/LibroDigital.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/LibroFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/LibroFisico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/LibroReferencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/LibroReferencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Prestamo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Prestamo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/BibliotecarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/BibliotecarioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/App/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Administrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/GestionEmpleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/GestionEmpleados.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +143,7 @@
       <workItem from="1747970214105" duration="3333000" />
       <workItem from="1748094153398" duration="1446000" />
       <workItem from="1748095689457" duration="1760000" />
+      <workItem from="1748097884395" duration="171000" />
     </task>
     <servers />
   </component>
