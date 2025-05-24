@@ -11,5 +11,14 @@ public class Main {
     Visitante visitante = new Visitante("Clara", "333B");
     LibroDigital libroDigital = new LibroDigital("Matemáticas generales", "Lucas", 2015, "www.librodigital.com", TipoFormato.PDF);
     LibroReferencia libroReferencia = new LibroReferencia("Libro de Gamer", "Pepe", 2022);
+    LibroFisico libroFisico1 = new LibroFisico("Crimen y castigo", "Fiodor", 1925, 200, "Normal", "A22");
+    LibroFisico libroFisico2 = new LibroFisico("100 años de soledad", "Gabriel", 1980, 170, "Normal", "A24");
+    LibroFisico libroFisico3 = new LibroFisico("La ciudad y los perros", "Andres", 2001, 210, "Caracol", "A24");
+    Prestamo prestamo1 = new Prestamo("1A2B", libroFisico1, 2, estudiante, bibliotecario);
+    Prestamo prestamo2 = new Prestamo("2C,3D", libroFisico2, 1, estudiante, bibliotecario);
+
+
+
+
 
 }

@@ -11,6 +11,7 @@ public class LibroReferencia extends Libro {
      */
     public LibroReferencia(String nombre, String autor, int anioPublicacion) {
         super(nombre, autor, anioPublicacion);
+        this.disponibilidad = false;
 
 
         
