@@ -29,7 +29,6 @@ public abstract class Empleado {
         this.listPrestamosBibliotecario = new ArrayList<>();
     }
 
-    public abstract String generarReporte();
 
     /**
      * Creación de los métodos getter y setter de losatributos de la clase Empleado

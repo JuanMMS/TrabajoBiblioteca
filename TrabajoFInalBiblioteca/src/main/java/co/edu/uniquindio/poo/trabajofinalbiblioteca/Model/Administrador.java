@@ -1,6 +1,7 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 
 public class Administrador extends Empleado implements GestionEmpleados {
+
     /**
      * Creación del método constructor de la clase administrador
      * @param nombre
@@ -14,10 +15,12 @@ public class Administrador extends Empleado implements GestionEmpleados {
         super(nombre, id , correo,usuario, contrasena);
     }
 
-
-    @Override
-    public String generarReporte() {
-        return null;
+    public String generarReporte(Bibliotecario bibliotecario) {
+        String reporte = "";
+        for (Prestamo prestamo : bibliotecario.getListPrestamosBibliotecario()) {
+            reporte += prestamo.toString() + "\n";
+        }
+        return reporte;
     }
 
     @Override
