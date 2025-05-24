@@ -22,8 +22,7 @@ public class Bibliotecario extends Empleado {
      * Metodo que genera un reporte de los libros prestados por bibliotecario
      * @return
      */
-
-    public String generarReporteLibrosPrestados() {
+    public String generarReporte() {
             StringBuilder reporte = new StringBuilder();
         for(Prestamo prestamo : getListPrestamosBibliotecario()){
             reporte.append(prestamo.toString()).append("\n");
@@ -31,4 +30,25 @@ public class Bibliotecario extends Empleado {
         return reporte.toString();
     }
 
+    /**
+     * Método para agregar prestamo a la lista "listPrestamosBibliotecario"
+     * @param prestamo
+     */
+    public void agregarPrestamo(Prestamo prestamo){
+        listPrestamosBibliotecario.add(prestamo);
+    }
+
+    /**
+     * Creación de los método getter y setter de listPrestamosBibliotecario
+     * @return
+     */
+    @Override
+    public List<Prestamo> getListPrestamosBibliotecario() {
+        return listPrestamosBibliotecario;
+    }
+
+    @Override
+    public void setListPrestamosBibliotecario(List<Prestamo> listPrestamosBibliotecario) {
+        this.listPrestamosBibliotecario = listPrestamosBibliotecario;
+    }
 }
