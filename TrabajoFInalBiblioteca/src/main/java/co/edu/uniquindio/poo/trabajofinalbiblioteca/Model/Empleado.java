@@ -29,7 +29,6 @@ public abstract class Empleado {
         this.listPrestamosBibliotecario = new ArrayList<>();
     }
 
-    public abstract String generarReporte();
 
     /**
      * Metodo de autenticacion
