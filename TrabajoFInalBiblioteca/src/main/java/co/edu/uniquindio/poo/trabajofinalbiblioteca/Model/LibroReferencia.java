@@ -8,10 +8,9 @@ public class LibroReferencia extends Libro {
      * @param nombre
      * @param autor
      * @param anioPublicacion
-     * @param disponibilidad
      */
-    public LibroReferencia(String nombre, String autor, int anioPublicacion, boolean disponibilidad) {
-        super(nombre, autor, anioPublicacion, disponibilidad);
+    public LibroReferencia(String nombre, String autor, int anioPublicacion) {
+        super(nombre, autor, anioPublicacion);
 
 
         

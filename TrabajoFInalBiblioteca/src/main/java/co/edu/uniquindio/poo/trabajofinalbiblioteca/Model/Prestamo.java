@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 
-public class Prestamo {
+public class Prestamo   {
     private String id;
     private Libro libro;
     private int duracion;

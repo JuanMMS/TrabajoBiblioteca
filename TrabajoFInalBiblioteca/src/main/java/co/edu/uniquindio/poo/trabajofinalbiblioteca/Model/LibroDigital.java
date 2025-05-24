@@ -11,12 +11,11 @@ public class LibroDigital extends Libro {
      * @param nombre
      * @param autor
      * @param anioPublicacion
-     * @param disponibilidad
      * @param linkDescarga
      * @param tipoFormato
      */
-    public LibroDigital(String nombre, String autor, int anioPublicacion, boolean disponibilidad, String linkDescarga, TipoFormato tipoFormato) {
-        super(nombre, autor, anioPublicacion, disponibilidad);
+    public LibroDigital(String nombre, String autor, int anioPublicacion, String linkDescarga, TipoFormato tipoFormato) {
+        super(nombre, autor, anioPublicacion);
         this.linkDescarga = linkDescarga;
         this.tipoFormato = tipoFormato;
     }
