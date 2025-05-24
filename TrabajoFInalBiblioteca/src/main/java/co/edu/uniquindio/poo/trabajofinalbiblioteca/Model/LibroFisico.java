@@ -5,6 +5,7 @@ public class LibroFisico extends Libro {
     private int numeroPaginas;
     private String editorial;
     private String ubicacion;
+    private int vecesPrestado;
 
     /**
      * Metodo constructor de la clase hija LibroFisico
@@ -20,7 +21,15 @@ public class LibroFisico extends Libro {
         this.numeroPaginas = numeroPaginas;
         this.editorial = editorial;
         this.ubicacion = ubicacion;
+        this.vecesPrestado = 0;
 
+    }
+
+    /**
+     * Metodo para aumentar el contador de veces prestado
+     */
+    public void aumentarVecesPrestado() {
+        this.vecesPrestado++;
     }
 
     /**
@@ -51,5 +60,10 @@ public class LibroFisico extends Libro {
         this.ubicacion = ubicacion;
     }
 
-
+    public int getVecesPrestado() {
+        return vecesPrestado;
+    }
+    public void setVecesPrestado(int vecesPrestado) {
+        this.vecesPrestado = vecesPrestado;
+    }
 }
