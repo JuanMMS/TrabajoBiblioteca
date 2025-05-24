@@ -9,7 +9,7 @@ public class Persona {
     private List<Prestamo> listPrestamosPersona;
 
 
-    public Persona(Biblioteca biblioteca, String nombre, String id) {
+    public Persona(String nombre, String id) {
         this.biblioteca = biblioteca;
         this.nombre = nombre;
         this.id = id;

@@ -68,4 +68,14 @@ public class Prestamo {
     public void setBibliotecario(Bibliotecario bibliotecario) {
         this.bibliotecario = bibliotecario;
     }
+
+    @Override
+    public String toString() {
+        return "Prestamo{" +
+                "id='" + id + '\'' +
+                ", libro=" + libro +
+                ", duracion=" + duracion +
+                ", persona=" + persona +
+                '}' + "\n";
+    }
 }
