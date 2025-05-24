@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController;
+package co.edu.uniquindio.poo.trabajofinalbiblioteca.controller;
 import co.edu.uniquindio.poo.trabajofinalbiblioteca.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
