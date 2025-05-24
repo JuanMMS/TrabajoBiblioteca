@@ -1,7 +1,6 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 
 public class Administrador extends Empleado implements GestionEmpleados {
-
     /**
      * Creación del método constructor de la clase administrador
      * @param nombre
@@ -11,8 +10,14 @@ public class Administrador extends Empleado implements GestionEmpleados {
      * @param contrasena
      */
 
-    public Administrador(String nombre, String id, String correo, String usuario, String contrasena){
-        super(nombre, id , correo,usuario, contrasena);
+    public Administrador(Biblioteca biblioteca, String nombre, String id, String correo, String usuario, String contrasena){
+        super(biblioteca, nombre, id , correo,usuario, contrasena);
+    }
+
+
+    @Override
+    public StringBuilder generarReporte() {
+        return null;
     }
 
     @Override
@@ -31,7 +36,7 @@ public class Administrador extends Empleado implements GestionEmpleados {
     }
     @Override
     public void eliminarEmpleado(Empleado empleado){
-        listEmpleados.remove(empleado);
+        ;
     }
 
 }
