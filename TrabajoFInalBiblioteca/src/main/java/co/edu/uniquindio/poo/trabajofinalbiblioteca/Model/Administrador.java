@@ -21,7 +21,7 @@ public class Administrador extends Empleado implements GestionEmpleados {
     }
 
     @Override
-    public void agregarEmpleado(Empleado empleado){
+    public void agregarEmpleado(Biblioteca biblioteca, Empleado empleado){
         biblioteca.agregarEmpleado(empleado);
     }
     @Override

@@ -4,8 +4,8 @@ import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*;
 
 public class Main {
     Biblioteca biblioteca = new Biblioteca("Los libros", "123A", "Cra 14, #5");
-    Bibliotecario bibliotecario = new Bibliotecario(biblioteca, "Ivan", "456B", "ivan@gmail.com", "Ivan123", "admin");
-    Administrador admin = new Administrador(biblioteca, "admin", "789C", "admin@gmail.com", "admin123", "admin123");
+    Bibliotecario bibliotecario = new Bibliotecario("Ivan", "456B", "ivan@gmail.com", "Ivan123", "admin");
+    Administrador admin = new Administrador("admin", "789C", "admin@gmail.com", "admin123", "admin123");
     Docente docente = new Docente("Raul", "111AB");
     Estudiante estudiante = new Estudiante("Esteban", "222B");
     Visitante visitante = new Visitante("Clara", "333B");
