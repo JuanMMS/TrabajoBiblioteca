@@ -10,6 +10,7 @@ public class Biblioteca{
     private List<Libro> listLibros;
     private List<Empleado> listEmpleados;
     private List<Persona> listPersonas;
+    private List<Prestamo> listPrestamos;
 
 
     /**
@@ -24,37 +25,47 @@ public class Biblioteca{
         this.direccion = direccion;
         this.listLibros = new ArrayList<>();
         this.listEmpleados = new ArrayList<>();
+        this.listPersonas = new ArrayList<>();
     }
 
+
+    /**
+     * CRUD PERSONA
+     */
+    public void agregarPersona(Persona persona){
+        listPersonas.add(persona);
+    }
+    public String visualizarPersona(Persona persona){
+        return persona.toString();
+    }
+    public void actualizarPersona(Persona persona, String nombre, String id){
+        persona.setNombre(nombre);
+        persona.setId(id);
+        listPersonas.add(persona);
+    }
+    public void eliminarPersona(Persona persona){
+        listPersonas.remove(persona);
+    }
 /**
  * CRUD EMPLEADO
  */
-
     public void agregarEmpleado(Empleado empleado){
         this.listEmpleados.add(empleado);
     }
-
     public String visualizarEmpleado(Empleado empleado){
         return empleado.toString();
     }
-
     public void actualizarEmpleado(Empleado empleado, String nombre, String id, String correo){
         empleado.setNombre(nombre);
         empleado.setId(id);
         empleado.setCorreo(correo);
     }
-
     public void eliminarEmpleado(Empleado empleado){
         listEmpleados.remove(empleado);
     }
-
-
-
-
     /**
      * CRUD LIBROS
      */
-
     public void agregarLibro(Libro libro) {
         listLibros.add(libro);
     }
@@ -70,6 +81,14 @@ public class Biblioteca{
     public void eliminarEmpleado(Libro libro){
     listLibros.remove(libro);
     }
+
+    /**
+     * Metodo para agregar prestamo
+     */
+    public void agregarPrestamo(Prestamo prestamo) {
+        listPrestamos.add(prestamo);
+    }
+
     /**
      * Creación de métodos getter y setters de los metodos de Biblioteca
      * @return
@@ -113,6 +132,4 @@ public class Biblioteca{
     public void setListEmpleados(List<Empleado> listEmpleados) {
         this.listEmpleados = listEmpleados;
     }
-
-
 }

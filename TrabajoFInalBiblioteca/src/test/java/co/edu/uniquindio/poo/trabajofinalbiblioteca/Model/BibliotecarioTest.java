@@ -33,9 +33,9 @@ class BibliotecarioTest {
         Prestamo prestamo2 = new Prestamo("2", libro2, 5, usuario1, bibliotecario1);
         Prestamo prestamo3 = new Prestamo("3", libro1, 5, usuario1, bibliotecario1); // mismo libro otra vez
 
-        bibliotecario1.agregarPrestamo(prestamo1);
-        bibliotecario1.agregarPrestamo(prestamo2);
-        bibliotecario1.agregarPrestamo(prestamo3);
+        bibliotecario1.agregarPrestamo(biblioteca1, prestamo1);
+        bibliotecario1.agregarPrestamo(biblioteca1, prestamo2);
+        bibliotecario1.agregarPrestamo(biblioteca1, prestamo3);
 
         // Marcar solo uno como devuelto (para que haya deuda)
         prestamo1.setDevuelto(true); // este está devuelto
