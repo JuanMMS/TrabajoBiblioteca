@@ -15,8 +15,8 @@ public class Bibliotecario extends Empleado {
      * @param usuario
      * @param contrasena
      */
-    public Bibliotecario(Biblioteca biblioteca, String nombre, String id, String correo, String usuario, String contrasena) {
-        super(biblioteca, nombre, id, correo, usuario, contrasena);
+    public Bibliotecario(String nombre, String id, String correo, String usuario, String contrasena) {
+        super(nombre, id, correo, usuario, contrasena);
         this.listPrestamosBibliotecario = new ArrayList<>();
     }
 
