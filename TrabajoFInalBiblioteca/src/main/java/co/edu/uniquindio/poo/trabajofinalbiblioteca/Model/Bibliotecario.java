@@ -8,7 +8,6 @@ public class Bibliotecario extends Empleado implements GestionLibro{
 
     /**
      * Creación del método constructor de la clase Bibliotecario
-     *
      * @param nombre
      * @param id
      * @param correo
@@ -78,17 +77,37 @@ public class Bibliotecario extends Empleado implements GestionLibro{
         return reporte;
     }
 
+    /*
+    *Metodos para la gestion de Personas que recurren la biblioteca
+     */
+    public void agregarPersona(Biblioteca biblioteca, Persona persona){
+        biblioteca.agregarPersona(persona);
+    }
+    public String visualizarPersona(Biblioteca biblioteca, Persona persona){
+        return biblioteca.visualizarPersona(persona);
+        }
+    public void actualizarPersona(Biblioteca biblioteca, Persona persona, String nombre, String id){
+        biblioteca.actualizarPersona(persona, nombre, id);
+    }
+    public void eliminarPersona(Biblioteca biblioteca, Persona persona){
+        biblioteca.eliminarPersona(persona);
+    }
+
+
+
     /**
-     * Método para agregar prestamo a la lista de prestamos del bibliotecario
+     * Método para crear un prestamo
      * @param prestamo
      */
-    public void agregarPrestamo(Prestamo prestamo){
+    public void agregarPrestamo(Biblioteca biblioteca, Prestamo prestamo){
         listPrestamosBibliotecario.add(prestamo);
+        biblioteca.agregarPrestamo(prestamo);
     }
     /**
      * Creación método getter y setter para el atributo "listPrestamosBlibliotecario"
      * @return
      */
+
     @Override
     public List<Prestamo> getListPrestamosBibliotecario() {
         return listPrestamosBibliotecario;

@@ -1,5 +1,6 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.controller;
 
+import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Biblioteca;
 import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Bibliotecario;
 import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Prestamo;
 
@@ -11,8 +12,8 @@ public class BibliotecarioController {
         this.bibliotecario = bibliotecario;
     }
 
-    public void agregarPrestamo(Prestamo prestamo) {
-        bibliotecario.agregarPrestamo(prestamo);
+    public void agregarPrestamo(Biblioteca biblioteca, Prestamo prestamo) {
+        biblioteca.agregarPrestamo(prestamo);
     }
 
     public void devolverLibro(Prestamo prestamo) {
