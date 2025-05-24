@@ -27,6 +27,12 @@ public class Bibliotecario extends Empleado {
      * @return
      */
 
+    public String generarReporte() {
+            StringBuilder reporte = new StringBuilder();
+        for(Prestamo prestamo : getListPrestamosBibliotecario()){
+            reporte.append(prestamo.toString()).append("\n");
+=======
+
 
     public void obtenerListPrestamosBibliotecario() {
         StringBuilder listPrestamos = new StringBuilder();
@@ -89,23 +95,6 @@ public class Bibliotecario extends Empleado {
         return resultado.toString();
     }
 
-    @Override
-    public StringBuilder generarReporte() {
-        StringBuilder reporte = new StringBuilder();
 
-        reporte.append("=== Resumen de préstamos de ").append(getNombre()).append(" ===\n\n");
-
-        if (listPrestamosBibliotecario.isEmpty()) {
-            reporte.append("No hay préstamos registrados.\n");
-        } else {
-            reporte.append("Listado de préstamos:\n");
-            for (Prestamo prestamo : listPrestamosBibliotecario) {
-                reporte.append("- ").append(prestamo.toString()).append("\n");
-            }
-        }
-
-        reporte.append("\n").append(obtenerLibrosMasPrestados());
-
-        return reporte;
     }
 }
