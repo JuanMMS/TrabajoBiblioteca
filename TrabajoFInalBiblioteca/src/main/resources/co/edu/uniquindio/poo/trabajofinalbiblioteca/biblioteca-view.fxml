@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.BibliotecaViewController" spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171">
+    <Label text="Gestión de Biblioteca"/>
+    <TabPane>
+        <Tab text="Empleados">
+            <VBox spacing="10">
+                <TableView fx:id="tablaEmpleados"/>
+                <HBox spacing="10">
+                    <TextField fx:id="nombreEmpleado" promptText="Nombre"/>
+                    <TextField fx:id="idEmpleado" promptText="ID"/>
+                    <TextField fx:id="correoEmpleado" promptText="Correo"/>
+                    <Button text="Agregar" onAction="#agregarEmpleado"/>
+                </HBox>
+            </VBox>
+        </Tab>
+        <Tab text="Libros">
+            <VBox spacing="10">
+                <TableView fx:id="tablaLibros"/>
+                <HBox spacing="10">
+                    <TextField fx:id="tituloLibro" promptText="Título"/>
+                    <TextField fx:id="autorLibro" promptText="Autor"/>
+                    <TextField fx:id="anioLibro" promptText="Año"/>
+                    <Button text="Agregar" onAction="#agregarLibro"/>
+                </HBox>
+            </VBox>
+        </Tab>
+    </TabPane>
+</VBox>
