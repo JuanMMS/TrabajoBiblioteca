@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.AdministradorViewController">
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <HBox spacing="10">
+                <VBox spacing="5">
+                    <Label text="Nombre" />
+                    <TextField fx:id="nombreField" />
+                </VBox>
+                <VBox spacing="5">
+                    <Label text="ID" />
+                    <TextField fx:id="idField" />
+                </VBox>
+                <VBox spacing="5">
+                    <Label text="Correo" />
+                    <TextField fx:id="correoField" />
+                </VBox>
+            </HBox>
+
+            <HBox spacing="10">
+                <Button text="Agregar" onAction="#agregarEmpleado" />
+                <Button text="Actualizar" onAction="#actualizarEmpleado" />
+                <Button text="Eliminar" onAction="#eliminarEmpleado" />
+                <Button text="Visualizar" onAction="#visualizarEmpleado" />
+            </HBox>
+
+            <Label text="Empleados" />
+            <ListView fx:id="empleadosListView" prefHeight="150" />
+
+            <Label text="Seleccionar Bibliotecario para Reporte" />
+            <ComboBox fx:id="bibliotecarioComboBox" />
+            <Button text="Generar Reporte" onAction="#generarReporte" />
+
+            <Label text="Reporte" />
+            <TextArea fx:id="reporteTextArea" prefHeight="200" wrapText="true" />
+        </VBox>
+    </center>
+</BorderPane>

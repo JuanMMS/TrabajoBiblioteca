@@ -26,6 +26,7 @@ public class Biblioteca{
         this.listLibros = new ArrayList<>();
         this.listEmpleados = new ArrayList<>();
         this.listPersonas = new ArrayList<>();
+        this.listPrestamos = new ArrayList<>();
     }
 
 
