@@ -3,7 +3,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.controller.PrimaryController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
+            fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.PrimaryViewController">
     <VBox alignment="CENTER" prefHeight="300" prefWidth="400" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <Label style="-fx-font-size: 18px;" text="Bienvenido a la Biblioteca" />
         <Button onAction="#abrirLogin" text="Empezar" />

@@ -31,7 +31,7 @@ public class App extends Application {
     //servicios, data basica para la función del programa
 
     public void inicializarData() {
-        Bibliotecario bibliotecario = new Bibliotecario("Ivan", "456B", "ivan@gmail.com", "Ivan123", "admin");
+        Bibliotecario bibliotecario1 = new Bibliotecario("Ivan", "456B", "ivan@gmail.com", "Ivan123", "admin");
         Administrador admin = new Administrador("admin", "789C", "admin@gmail.com", "admin123", "admin123");
         Docente docente = new Docente("Raul", "111AB");
         Estudiante estudiante = new Estudiante("Esteban", "222B");
@@ -41,10 +41,10 @@ public class App extends Application {
         LibroFisico libroFisico1 = new LibroFisico("Crimen y castigo", "Fiodor", 1925, 200, "Normal", "A22");
         LibroFisico libroFisico2 = new LibroFisico("100 años de soledad", "Gabriel", 1980, 170, "Normal", "A24");
         LibroFisico libroFisico3 = new LibroFisico("La ciudad y los perros", "Andres", 2001, 210, "Caracol", "A24");
-        Prestamo prestamo1 = new Prestamo("1A2B", libroFisico1, 2, estudiante, bibliotecario);
-        Prestamo prestamo2 = new Prestamo("2C,3D", libroFisico2, 1, estudiante, bibliotecario);
+        Prestamo prestamo1 = new Prestamo("1A2B", libroFisico1, 2, estudiante, bibliotecario1);
+        Prestamo prestamo2 = new Prestamo("2C,3D", libroFisico2, 1, estudiante, bibliotecario1);
         // Agregar empleados
-        biblioteca.agregarEmpleado(bibliotecario);
+        biblioteca.agregarEmpleado(bibliotecario1);
         biblioteca.agregarEmpleado(admin);
         // Agregar libros
         biblioteca.agregarLibro(libroDigital);
@@ -52,6 +52,10 @@ public class App extends Application {
         biblioteca.agregarLibro(libroFisico1);
         biblioteca.agregarLibro(libroFisico2);
         biblioteca.agregarLibro(libroFisico3);
+        biblioteca.agregarPrestamo(prestamo1);
+        biblioteca.agregarPrestamo(prestamo2);
+        bibliotecario1.agregarPrestamo(biblioteca, prestamo1);
+        bibliotecario1.agregarPrestamo(biblioteca, prestamo2);
         // Si tienes listas para estudiantes/docentes/visitantes, agrégalos también si es necesario
         //FALTA AGREGAR LAS COSAS A BIBLIOTECA es decir agregar por medio del crud existente dentro de la biblioteca
 

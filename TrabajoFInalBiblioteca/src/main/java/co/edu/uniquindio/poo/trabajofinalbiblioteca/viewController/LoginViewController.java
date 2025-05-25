@@ -1,6 +1,7 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController;
 
 import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Empleado;
+import co.edu.uniquindio.poo.trabajofinalbiblioteca.controller.LoginController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,13 +34,15 @@ public class LoginViewController {
 
     private List<Empleado> listaEmpleados;
 
+    private final LoginController loginController = new LoginController();
+
     public void setListaEmpleados(List<Empleado> empleados) {
         this.listaEmpleados = empleados;
+        loginController.setListaEmpleados(empleados);
     }
 
     @FXML
     public void initialize() {
-        // Enlazar ToggleGroup en caso de que no funcione correctamente desde FXML
         if (rolGroup == null) {
             rolGroup = new ToggleGroup();
             adminRadioBtn.setToggleGroup(rolGroup);
@@ -64,22 +67,20 @@ public class LoginViewController {
             return;
         }
 
-        for (Empleado empleado : listaEmpleados) {
-            if (empleado.getClass().getSimpleName().equalsIgnoreCase(rolSeleccionado)
-                    && empleado.validarCredenciales(usuario, contrasenia)) {
-
-                FXMLLoader loader = new FXMLLoader(getClass().getResource(
-                        rolSeleccionado.equals("Administrador") ? "/views/AdministradorView.fxml" : "/views/BibliotecarioView.fxml"
-                ));
-                Stage stage = (Stage) ingresarBtn.getScene().getWindow();
-                Scene nuevaEscena = new Scene(loader.load());
-                stage.setScene(nuevaEscena);
-                stage.show();
-                return;
-            }
+        Empleado empleado = loginController.autenticar(usuario, contrasenia, rolSeleccionado);
+        if (empleado != null) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                    rolSeleccionado.equals("Administrador")
+                            ? "/co/edu/uniquindio/poo/trabajofinalbiblioteca/administrador_view.fxml"
+                            : "/co/edu/uniquindio/poo/trabajofinalbiblioteca/bibliotecario_view.fxml"
+            ));
+            Stage stage = (Stage) ingresarBtn.getScene().getWindow();
+            Scene nuevaEscena = new Scene(loader.load());
+            stage.setScene(nuevaEscena);
+            stage.show();
+        } else {
+            mostrarAlerta("Error", "Credenciales incorrectas o rol no válido.");
         }
-
-        mostrarAlerta("Error", "Credenciales incorrectas o rol no válido.");
     }
 
     private void mostrarAlerta(String titulo, String mensaje) {
