@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.Controller.PrimaryViewController">
-    <VBox spacing="20" alignment="CENTER" prefWidth="400" prefHeight="300" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
-        <Label text="Bienvenido a la Biblioteca" style="-fx-font-size: 18px;" />
-        <Button text="Iniciar sesión" onAction="#abrirLogin"/>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.controller.PrimaryController">
+    <VBox alignment="CENTER" prefHeight="300" prefWidth="400" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Label style="-fx-font-size: 18px;" text="Bienvenido a la Biblioteca" />
+        <Button onAction="#abrirLogin" text="Empezar" />
     </VBox>
 </AnchorPane>

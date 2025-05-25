@@ -17,24 +17,17 @@ public class App extends Application {
     public void start(Stage primaryStage) throws IOException {
         this.primaryStage = primaryStage;
         primaryStage.setTitle("Biblioteca");
-
-        public void start(Stage primaryStage) throws IOException {
-            this.primaryStage = primaryStage;
-            primaryStage.setTitle("Biblioteca");
-            inicializarData();
-            openPrimaryView();
-        }
+        inicializarData();
+        openPrimaryView();
     }
 
     private void openPrimaryView() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/PrimaryView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/trabajofinalbiblioteca/Primary.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
-
     //servicios, data basica para la función del programa
 
     public void inicializarData() {
@@ -61,8 +54,6 @@ public class App extends Application {
         biblioteca.agregarLibro(libroFisico3);
         // Si tienes listas para estudiantes/docentes/visitantes, agrégalos también si es necesario
         //FALTA AGREGAR LAS COSAS A BIBLIOTECA es decir agregar por medio del crud existente dentro de la biblioteca
-
-
 
     }
 
