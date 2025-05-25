@@ -29,7 +29,7 @@ public class BibliotecaViewController {
     @FXML
     public void agregarEmpleado() {
         Empleado empleado = new Empleado(nombreEmpleadoField.getText(), idEmpleadoField.getText(), correoEmpleadoField.getText(), "Juan", "1234") {
-            @Override
+
             public String generarReporte() {
                 return "";
             }

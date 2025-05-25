@@ -14,7 +14,7 @@ public class PrimaryViewController {
 
     @FXML
     public void abrirLogin(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/LoginView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/trabajofinalbiblioteca/Login.fxml"));
         Parent root = loader.load();
 
         // Pasar lista de empleados al login
