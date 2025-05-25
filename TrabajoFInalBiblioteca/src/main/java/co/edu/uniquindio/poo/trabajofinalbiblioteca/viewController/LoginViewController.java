@@ -20,7 +20,13 @@ public class LoginViewController {
     private PasswordField contraseniaField;
 
     @FXML
-    private ChoiceBox<String> rolChoiceBox;
+    private RadioButton adminRadioBtn;
+
+    @FXML
+    private RadioButton bibliotecarioRadioBtn;
+
+    @FXML
+    private ToggleGroup rolGroup;
 
     @FXML
     private Button ingresarBtn;
@@ -33,17 +39,28 @@ public class LoginViewController {
 
     @FXML
     public void initialize() {
-        rolChoiceBox.getItems().addAll("Administrador", "Bibliotecario");
+        // Enlazar ToggleGroup en caso de que no funcione correctamente desde FXML
+        if (rolGroup == null) {
+            rolGroup = new ToggleGroup();
+            adminRadioBtn.setToggleGroup(rolGroup);
+            bibliotecarioRadioBtn.setToggleGroup(rolGroup);
+        }
     }
 
     @FXML
     public void ingresar(ActionEvent event) throws IOException {
         String usuario = usuarioField.getText();
         String contrasenia = contraseniaField.getText();
-        String rolSeleccionado = rolChoiceBox.getValue();
+
+        String rolSeleccionado = null;
+        if (adminRadioBtn.isSelected()) {
+            rolSeleccionado = "Administrador";
+        } else if (bibliotecarioRadioBtn.isSelected()) {
+            rolSeleccionado = "Bibliotecario";
+        }
 
         if (rolSeleccionado == null || usuario.isEmpty() || contrasenia.isEmpty()) {
-            mostrarAlerta("Error", "Todos los campos son obligatorios.");
+            mostrarAlerta("Error", "Todos los campos son obligatorios y debe seleccionar un rol.");
             return;
         }
 
@@ -71,5 +88,4 @@ public class LoginViewController {
         alert.setContentText(mensaje);
         alert.showAndWait();
     }
-
 }

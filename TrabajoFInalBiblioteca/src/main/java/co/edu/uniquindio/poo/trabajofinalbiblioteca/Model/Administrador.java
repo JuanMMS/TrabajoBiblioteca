@@ -15,11 +15,7 @@ public class Administrador extends Empleado implements GestionEmpleados {
         super(nombre, id , correo,usuario, contrasena);
     }
 
-    /**
-     * Metodo para mostrar todos los reportes del bibliotecario en texto
-     * @param bibliotecario
-     * @return
-     */
+
     public String generarReporte(Bibliotecario bibliotecario) {
         String reporte = "";
         for (Prestamo prestamo : bibliotecario.getListPrestamosBibliotecario()) {
