@@ -3,7 +3,7 @@ package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Empleado {
+public abstract class  Empleado {
     private String nombre;
     private String id;
     private String correo;

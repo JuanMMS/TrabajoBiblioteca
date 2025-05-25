@@ -15,6 +15,11 @@ public class Administrador extends Empleado implements GestionEmpleados {
         super(nombre, id , correo,usuario, contrasena);
     }
 
+    /**
+     * Metodo para mostrar todos los reportes del bibliotecario en texto
+     * @param bibliotecario
+     * @return
+     */
     public String generarReporte(Bibliotecario bibliotecario) {
         String reporte = "";
         for (Prestamo prestamo : bibliotecario.getListPrestamosBibliotecario()) {
@@ -23,6 +28,11 @@ public class Administrador extends Empleado implements GestionEmpleados {
         return reporte;
     }
 
+    /**
+     * Metodos CRUD de empleado por medio de la biblioteca
+     * @param biblioteca
+     * @param empleado
+     */
     @Override
     public void agregarEmpleado(Biblioteca biblioteca, Empleado empleado){
         biblioteca.agregarEmpleado(empleado);

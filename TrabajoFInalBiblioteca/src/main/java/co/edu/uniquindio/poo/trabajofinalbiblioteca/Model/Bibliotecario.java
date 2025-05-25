@@ -23,7 +23,9 @@ public class Bibliotecario extends Empleado implements GestionLibro{
      * Metodo para agregar un libro a la biblioteca
      */
     @Override
-    public void agregarLibro(Libro libro) {
+    public void agregarLibro(Biblioteca biblioteca, Libro libro) {
+        biblioteca.agregarLibro(libro);
+
 
     }
     /**
@@ -77,8 +79,9 @@ public class Bibliotecario extends Empleado implements GestionLibro{
         return reporte;
     }
 
-    /*
+    /**
     *Metodos para la gestion de Personas que recurren la biblioteca
+     * @param biblioteca
      */
     public void agregarPersona(Biblioteca biblioteca, Persona persona){
         biblioteca.agregarPersona(persona);
@@ -94,9 +97,9 @@ public class Bibliotecario extends Empleado implements GestionLibro{
     }
 
 
-
     /**
-     * Método para crear un prestamo
+     * Metodo para agregar preestamo
+     * @param biblioteca
      * @param prestamo
      */
     public void agregarPrestamo(Biblioteca biblioteca, Prestamo prestamo){
