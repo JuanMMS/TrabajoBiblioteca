@@ -57,6 +57,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+    "JUnit.BibliotecarioTest.executor": "Run",
     "JUnit.BibliotecarioTest.generarReporteTest.executor": "Run",
     "JUnit.BibliotecarioTest.libroMasPrestadoTest.executor": "Run",
     "JUnit.BibliotecarioTest.listPersonasConDeudaTest.executor": "Run",
@@ -84,7 +85,7 @@
       <recent name="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BibliotecarioTest.generarReporteTest">
+  <component name="RunManager" selected="JUnit.BibliotecarioTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.App" />
       <module name="TrabajoFInalBiblioteca" />
@@ -94,6 +95,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BibliotecarioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TrabajoFInalBiblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.BibliotecarioTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,22 +146,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BibliotecarioTest.listPersonasConDeudaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrabajoFInalBiblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.BibliotecarioTest" />
-      <option name="METHOD_NAME" value="listPersonasConDeudaTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BibliotecarioTest.nombrePersonasConDeudaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrabajoFInalBiblioteca" />
       <extension name="coverage">
@@ -164,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BibliotecarioTest" />
         <item itemvalue="JUnit.BibliotecarioTest.generarReporteTest" />
         <item itemvalue="JUnit.BibliotecarioTest.libroMasPrestadoTest" />
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.BibliotecarioTest.nombrePersonasConDeudaTest" />
-        <item itemvalue="JUnit.BibliotecarioTest.listPersonasConDeudaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -191,6 +191,7 @@
       <workItem from="1748145945376" duration="1475000" />
       <workItem from="1748147616312" duration="278000" />
       <workItem from="1748309139053" duration="3371000" />
+      <workItem from="1748315316490" duration="990000" />
     </task>
     <servers />
   </component>

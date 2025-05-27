@@ -35,13 +35,13 @@ class BibliotecarioTest {
         // Verificaciones
         System.out.println(reporte);
         assertTrue(reporte.contains("Reporte de préstamos de Pedro:"));
-      /** assertTrue(reporte.contains("Don Quijote"));
+        assertTrue(reporte.contains("Don Quijote"));
         assertTrue(reporte.contains("1984"));
 
-        assertTrue(reporte.contains("Libro más prestado: Don Quijote"));
+        assertTrue(reporte.contains("Devuelto"));
         assertTrue(reporte.contains("2 veces")); // Don Quijote fue prestado dos veces
 
-        assertTrue(reporte.contains("Usuarios con deudas:"));
+        assertTrue(reporte.contains("Lista de personas con deuda:"));
         assertTrue(reporte.contains("Juan")); // usuario con deuda */
     }
 
