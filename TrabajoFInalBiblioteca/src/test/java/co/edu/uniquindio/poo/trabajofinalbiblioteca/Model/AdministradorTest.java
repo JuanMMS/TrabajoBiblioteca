@@ -7,6 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AdministradorTest {
 
+    /**
+     * Test que verifica la generación de reporte desde un Administrador,
+     *  devuelve una cadena con todos los préstamos de un bibliotecario
+     */
     @Test
     public void testGenerarReporte() {
         Bibliotecario bibliotecario1 = new Bibliotecario("Luis", "123", "luis@uq.edu.co", "luis123", "clave123");
@@ -27,6 +31,10 @@ class AdministradorTest {
 
 
 
+    /**
+     * Test para agregar un empleado a la biblioteca desde un Administrador
+     * usando el método agregarEmpleado y verificar que quede en la lista
+     */
     @Test
     void agregarEmpleado() {
         Biblioteca biblioteca = new Biblioteca("Los libros", "444", "cr19N");
@@ -36,6 +44,10 @@ class AdministradorTest {
         assertTrue(biblioteca.getListEmpleados().contains(nuevoEmpleado));
     }
 
+    /**
+     * Test para visualizar en toString  un empleado
+     * desde un Administrador, usando el método visualizarEmpleado
+     */
     @Test
     void visualizarEmpleado() {
         Biblioteca biblioteca = new Biblioteca("Los libros", "444", "cr19N");
@@ -47,6 +59,10 @@ class AdministradorTest {
         assertEquals(esperado, resultado);
     }
 
+    /**
+     * Test para actualizar los datos de un empleado desde un Administrador,
+     * y verificar que si se hayan actualizado
+     */
     @Test
     void actualizarEmpleado() {
         Biblioteca biblioteca = new Biblioteca("Los libros", "444", "cr19N");
@@ -58,6 +74,11 @@ class AdministradorTest {
         assertEquals("carlosp@correo.com", empleado.getCorreo());
 
     }
+
+    /**
+     * Test para eliminar un empleado desde un Administrador,
+     * verificando que sea eliminado de la lista de empleados de la biblioteca
+     */
 
     @Test
     void eliminarEmpleado() {

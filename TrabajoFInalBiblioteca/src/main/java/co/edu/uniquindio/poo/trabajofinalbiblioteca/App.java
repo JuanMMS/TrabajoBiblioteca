@@ -1,6 +1,9 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca;
 
 import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*;
+import co.edu.uniquindio.poo.trabajofinalbiblioteca.controller.BibliotecarioController;
+import co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.BibliotecaViewController;
+import co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.BibliotecarioViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -28,20 +31,21 @@ public class App extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
-    public void openBibliotecarioView(Bibliotecario bibliotecario) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/trabajofinalbiblioteca/bibliotecario_view.fxml"));
+    public void abrirVistaBibliotecario(Bibliotecario bibliotecario) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/trabajofinalbiblioteca/Bibliotecario.fxml"));
         Parent root = loader.load();
 
-        // Pasar datos al ViewController
-        co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.BibliotecarioViewController controller = loader.getController();
-        controller.setBibliotecaYBibliotecario(biblioteca, bibliotecario);
+        BibliotecarioViewController viewController = loader.getController();
+        BibliotecarioController controller = new BibliotecarioController(bibliotecario);
+        viewController.setController(controller);
 
         Stage stage = new Stage();
-        stage.setTitle("Bienvenido");
+        stage.setTitle("Panel del Bibliotecario");
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+
 
     //servicios, data basica para la función del programa
 

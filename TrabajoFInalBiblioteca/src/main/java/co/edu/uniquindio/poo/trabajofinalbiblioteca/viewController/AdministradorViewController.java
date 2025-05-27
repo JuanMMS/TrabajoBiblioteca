@@ -4,7 +4,13 @@ package co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController;
 import co.edu.uniquindio.poo.trabajofinalbiblioteca.App;
 import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class AdministradorViewController {
 
@@ -16,6 +22,8 @@ public class AdministradorViewController {
     private ListView<Empleado> empleadosListView;
     @FXML
     private ComboBox<Bibliotecario> bibliotecarioComboBox;
+    @FXML
+    private Button btnVolver;
 
     private Administrador administrador;
 
@@ -40,6 +48,25 @@ public class AdministradorViewController {
             String reporte = administrador.generarReporte(seleccionado);
             reporteTextArea.setText(reporte);
         }
+    }
+    @FXML
+    private void volver() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/trabajofinalbiblioteca/Primary.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) btnVolver.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            mostrarMensaje("Error al volver: " + e.getMessage());
+        }
+    }
+    private void mostrarMensaje(String mensaje) {
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+        alerta.setTitle("Información");
+        alerta.setHeaderText(null);
+        alerta.setContentText(mensaje);
+        alerta.showAndWait();
     }
 
     @FXML
