@@ -73,6 +73,10 @@ public class App extends Application {
         // Agregar empleados
         biblioteca.agregarEmpleado(bibliotecario1);
         biblioteca.agregarEmpleado(admin);
+        //Agregar personas
+        biblioteca.agregarPersona(docente);
+        biblioteca.agregarPersona(estudiante);
+        biblioteca.agregarPersona(visitante);
         // Agregar libros
         biblioteca.agregarLibro(libroDigital);
         biblioteca.agregarLibro(libroReferencia);
