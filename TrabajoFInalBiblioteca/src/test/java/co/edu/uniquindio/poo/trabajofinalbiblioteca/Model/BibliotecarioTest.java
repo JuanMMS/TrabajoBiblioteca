@@ -5,18 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 class BibliotecarioTest {
 
-
-
-   /** void generarReporteTest() {
-        Biblioteca biblioteca1 = new Biblioteca("Casa", "1234", "Uniquindio");
-        Bibliotecario bibliotecario1 = new Bibliotecario(biblioteca1, "Pedro", "ABC", "perdro@mail.com", "Pedro22", "Admin");
-        Estudiante estudiante1 = new Estudiante("Esteban", "DEF");
-        Docente docente1 = new Docente("Raul", "456");
-    LibroFisico libro = new LibroFisico("200 Años de soledad", "Marquez García", 2000, true, 199, "Norma", "A2");
-    */
-
-
-
     @Test
     void generarReporteTest() {
         // Crear la biblioteca y el bibliotecario

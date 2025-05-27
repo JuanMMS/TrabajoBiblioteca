@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="Default" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/BibliotecarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/BibliotecarioTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +35,12 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/JuanMMS/TrabajoBiblioteca.git",
-    "accountId": "673e4e1a-aedc-4609-8778-5c6fea7f3d43"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JuanMMS/TrabajoBiblioteca.git&quot;,
+    &quot;accountId&quot;: &quot;673e4e1a-aedc-4609-8778-5c6fea7f3d43&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
@@ -55,7 +56,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
-
+    "git-widget-placeholder": "dev__juanma",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/POOI-Proyectos/empresaJFX",
     "node.js.detected.package.eslint": "true",
@@ -66,44 +67,6 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-
-      <module name="TrabajoFInalBiblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.AdministradorTest" />
-      <option name="METHOD_NAME" value="visualizarEmpleado" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BibliotecarioTest.generarReporteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrabajoFInalBiblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.BibliotecarioTest" />
-      <option name="METHOD_NAME" value="generarReporteTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
