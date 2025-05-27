@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.*?>
+
 <?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.PrestamoViewController">
+<AnchorPane prefHeight="275.0" prefWidth="343.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.PrestamoViewController">
     <children>
-        <Label layoutX="30" layoutY="20" text="Registrar Préstamo"/>
-        <Label layoutX="30" layoutY="60" text="ID:"/>
-        <TextField fx:id="idField" layoutX="100" layoutY="60"/>
+        <Label graphicTextGap="8.0" layoutX="59.0" layoutY="14.0" text="Registrar Préstamo">
+         <font>
+            <Font size="25.0" />
+         </font></Label>
+        <Label layoutX="30" layoutY="60" text="ID:" />
+        <TextField fx:id="idField" layoutX="100" layoutY="60" />
 
-        <Label layoutX="30" layoutY="100" text="Libro:"/>
+        <Label layoutX="30" layoutY="100" text="Libro:" />
         <ComboBox fx:id="libroCombo" layoutX="100" layoutY="100" />
 
-        <Label layoutX="30" layoutY="140" text="Duración:"/>
-        <TextField fx:id="duracionField" layoutX="100" layoutY="140"/>
+        <Label layoutX="30" layoutY="140" text="Duración:" />
+        <TextField fx:id="duracionField" layoutX="100" layoutY="140" />
 
-        <Label layoutX="30" layoutY="180" text="Persona:"/>
-        <TextField fx:id="personaField" layoutX="100" layoutY="180"/>
+        <Label layoutX="30" layoutY="180" text="Persona:" />
+        <ComboBox fx:id="personaCombo" layoutX="100" layoutY="180" prefWidth="200" />
 
-        <Button fx:id="registrarBtn" text="Registrar" layoutX="100" layoutY="220" onAction="#registrarPrestamo"/>
-        <Button text="Volver" layoutX="200" layoutY="220" onAction="#volverABibliotecario"/>
+        <Button fx:id="registrarBtn" layoutX="100" layoutY="220" onAction="#registrarPrestamo" text="Registrar" />
+        <Button layoutX="200" layoutY="220" onAction="#volverABibliotecario" text="Volver" />
     </children>
 </AnchorPane>

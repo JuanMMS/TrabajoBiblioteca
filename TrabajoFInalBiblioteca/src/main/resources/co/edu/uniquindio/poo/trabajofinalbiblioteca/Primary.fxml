@@ -2,13 +2,16 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
-            fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.PrimaryViewController"
-            prefHeight="300.0" prefWidth="400.0">
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.PrimaryViewController">
+    <Label alignment="CENTER" layoutX="63.0" layoutY="100.0" prefHeight="61.0" prefWidth="273.0" style="-fx-font-size: 18px;" text="Bienvenido a la Biblioteca" textOverrun="WORD_ELLIPSIS">
+      <font>
+         <Font size="38.0" />
+      </font></Label>
 
-    <Label layoutX="110.0" layoutY="100.0" text="Bienvenido a la Biblioteca" style="-fx-font-size: 18px;" />
-
-    <Button layoutX="160.0" layoutY="150.0" text="Empezar" onAction="#abrirLogin" />
+    <Button layoutX="96.0" layoutY="196.0" onAction="#abrirLogin" prefHeight="72.0" prefWidth="207.0" text="Empezar" />
 
 </AnchorPane>
