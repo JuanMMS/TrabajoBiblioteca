@@ -10,7 +10,7 @@ public class Libro {
 
     /**
      * Metodo constructor de la clase padre Libro
-     * @param Titulo
+     * @param titulo
      * @param autor
      * @param anioPublicacion
      */
