@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 
-public interface GestionEmpleados {
+public interface GestionEmpleado {
 
     public void agregarEmpleado(Biblioteca biblioteca, Empleado empleado);
     public String visualizarEmpleado(Biblioteca biblioteca, Empleado empleado);

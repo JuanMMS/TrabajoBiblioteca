@@ -9,15 +9,15 @@ public class LibroFisico extends Libro {
 
     /**
      * Metodo constructor de la clase hija LibroFisico
-     * @param nombre
+     * @param titulo
      * @param autor
      * @param anioPublicacion
      * @param numeroPaginas
      * @param editorial
      * @param ubicacion
      */
-    public LibroFisico(String nombre, String autor, int anioPublicacion, int numeroPaginas, String editorial, String ubicacion) {
-        super(nombre, autor, anioPublicacion);
+    public LibroFisico(String titulo, String autor, int anioPublicacion, int numeroPaginas, String editorial, String ubicacion) {
+        super(titulo, autor, anioPublicacion);
         this.numeroPaginas = numeroPaginas;
         this.editorial = editorial;
         this.ubicacion = ubicacion;

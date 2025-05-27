@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 
-public class Administrador extends Empleado implements GestionEmpleados {
+public class Administrador extends Empleado implements GestionEmpleado {
 
     /**
      * Creación del método constructor de la clase administrador

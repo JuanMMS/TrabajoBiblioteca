@@ -8,14 +8,14 @@ public class LibroDigital extends Libro {
 
     /**
      * Metodo constructor de la clase hija LibroDigital
-     * @param nombre
+     * @param titulo
      * @param autor
      * @param anioPublicacion
      * @param linkDescarga
      * @param tipoFormato
      */
-    public LibroDigital(String nombre, String autor, int anioPublicacion, String linkDescarga, TipoFormato tipoFormato) {
-        super(nombre, autor, anioPublicacion);
+    public LibroDigital(String titulo, String autor, int anioPublicacion, String linkDescarga, TipoFormato tipoFormato) {
+        super(titulo, autor, anioPublicacion);
         this.linkDescarga = linkDescarga;
         this.tipoFormato = tipoFormato;
     }
