@@ -271,8 +271,6 @@ class BibliotecarioTest {
         Biblioteca biblioteca = new Biblioteca("Los libros", "444", "cr19N");
         Persona persona = new Persona("Carlos", "300");
         Bibliotecario bibliotecario = new Bibliotecario("Admin", "001", "admin@uq.edu.co", "admin", "admin123");
-        //Actualizamos la información de una persona
-        bibliotecario.actualizarPersona(biblioteca, persona ,"Carlos Pérez", "999");
         //Verificaciones
         bibliotecario.eliminarPersona(biblioteca, persona);
         assertFalse(biblioteca.getListPersonas().contains(persona));
