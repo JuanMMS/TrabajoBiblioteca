@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="Default" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Biblioteca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/AdministradorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/AdministradorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/BibliotecaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/BibliotecaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,25 +55,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
-    "JUnit.AdministradorTest.actualizarEmpleado.executor": "Run",
-    "JUnit.AdministradorTest.agregarEmpleado.executor": "Run",
-    "JUnit.AdministradorTest.eliminarEmpleado.executor": "Run",
-    "JUnit.AdministradorTest.testGenerarReporte.executor": "Run",
-    "JUnit.AdministradorTest.visualizarEmpleado.executor": "Run",
-    "JUnit.BibliotecaTest.actualizarLibro.executor": "Run",
-    "JUnit.BibliotecaTest.actualizarPersona.executor": "Run",
-    "JUnit.BibliotecaTest.agregarEmpleado.executor": "Run",
-    "JUnit.BibliotecaTest.agregarLibro.executor": "Run",
-    "JUnit.BibliotecaTest.agregarPersona.executor": "Run",
-    "JUnit.BibliotecaTest.agregarPrestamo.executor": "Run",
-    "JUnit.BibliotecaTest.eliminarEmpleado.executor": "Run",
-    "JUnit.BibliotecaTest.eliminarPersona.executor": "Run",
-    "JUnit.BibliotecaTest.testEliminarEmpleado.executor": "Run",
-    "JUnit.BibliotecaTest.visualizarEmpleado.executor": "Run",
-    "JUnit.BibliotecaTest.visualizarPersona.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "dev__sofia",
+
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/POOI-Proyectos/empresaJFX",
     "node.js.detected.package.eslint": "true",

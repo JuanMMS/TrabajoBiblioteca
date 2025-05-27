@@ -4,9 +4,11 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
-            fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.PrimaryViewController">
-    <VBox alignment="CENTER" prefHeight="300" prefWidth="400" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <Label style="-fx-font-size: 18px;" text="Bienvenido a la Biblioteca" />
-        <Button onAction="#abrirLogin" text="Empezar" />
-    </VBox>
+            fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.PrimaryViewController"
+            prefHeight="300.0" prefWidth="400.0">
+
+    <Label layoutX="110.0" layoutY="100.0" text="Bienvenido a la Biblioteca" style="-fx-font-size: 18px;" />
+
+    <Button layoutX="160.0" layoutY="150.0" text="Empezar" onAction="#abrirLogin" />
+
 </AnchorPane>

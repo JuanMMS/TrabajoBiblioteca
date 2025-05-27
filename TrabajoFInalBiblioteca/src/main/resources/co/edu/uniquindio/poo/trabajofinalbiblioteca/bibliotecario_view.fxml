@@ -1,26 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox spacing="10" xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.BibliotecarioViewController"
-      alignment="TOP_CENTER" padding="20">
+<AnchorPane prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.BibliotecarioViewController">
 
-    <Label text="Gestión del Bibliotecario" style="-fx-font-size: 18;" />
+    <!-- Título -->
+    <Label layoutX="20.0" layoutY="20.0" style="-fx-font-size: 18px;" text="Gestión del Bibliotecario" />
 
-    <HBox spacing="10">
-        <TextField fx:id="nombreLibroField" promptText="Nombre del libro" />
-        <Button text="Agregar Libro" onAction="#agregarLibro"/>
-    </HBox>
+    <!-- Botón Log out -->
+    <Button fx:id="btnVolver" layoutX="708.0" layoutY="21.0" text="Log out" />
 
-    <HBox spacing="10">
-        <TextField fx:id="nombrePersonaField" promptText="Nombre de la persona" />
-        <Button text="Agregar Persona" onAction="#agregarPersona"/>
-    </HBox>
+    <!-- Nombre -->
+    <Label layoutX="20.0" layoutY="80.0" text="Nombre:" />
+    <TextField fx:id="txtNombrePersona" layoutX="100.0" layoutY="76.0" promptText="Nombre completo" />
 
-    <Button text="Generar Reporte" onAction="#generarReporte"/>
-    <TextArea fx:id="reporteTextArea" prefRowCount="15" prefWidth="400"/>
+    <!-- ID -->
+    <Label layoutX="350.0" layoutY="80.0" text="ID:" />
+    <TextField fx:id="txtIdPersona" layoutX="390.0" layoutY="76.0" promptText="Identificación" />
 
-</VBox>
+    <!-- Tipo Persona -->
+    <Label layoutX="20.0" layoutY="130.0" text="Tipo de Persona:" />
+    <ComboBox fx:id="comboTipoPersona" layoutX="130.0" layoutY="126.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Estudiante" />
+                <String fx:value="Docente" />
+                <String fx:value="Visitante" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <!-- Botones -->
+    <Button fx:id="btnAgregarPersona" layoutX="300.0" layoutY="170.0" text="Agregar Persona" />
+    <Button fx:id="btnGenerarReporte" layoutX="430.0" layoutY="170.0" text="Generar Reporte" />
+
+    <!-- TextArea Reporte -->
+    <TextArea fx:id="txtAreaReporte" layoutX="20.0" layoutY="220.0" prefHeight="300.0" prefWidth="760.0" wrapText="true" />
+
+</AnchorPane>

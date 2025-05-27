@@ -1,45 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.AdministradorViewController">
-    <center>
-        <VBox spacing="10">
-            <padding>
-                <Insets top="20" right="20" bottom="20" left="20"/>
-            </padding>
-            <HBox spacing="10">
-                <VBox spacing="5">
-                    <Label text="Nombre" />
-                    <TextField fx:id="nombreField" />
-                </VBox>
-                <VBox spacing="5">
-                    <Label text="ID" />
-                    <TextField fx:id="idField" />
-                </VBox>
-                <VBox spacing="5">
-                    <Label text="Correo" />
-                    <TextField fx:id="correoField" />
-                </VBox>
-            </HBox>
+<AnchorPane prefHeight="700" prefWidth="800" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.AdministradorViewController">
 
-            <HBox spacing="10">
-                <Button text="Agregar" onAction="#agregarEmpleado" />
-                <Button text="Actualizar" onAction="#actualizarEmpleado" />
-                <Button text="Eliminar" onAction="#eliminarEmpleado" />
-                <Button text="Visualizar" onAction="#visualizarEmpleado" />
-            </HBox>
+    <!-- Botón Log out -->
+    <Button fx:id="btnVolver" layoutX="728.0" layoutY="16.0" text="Log out" onAction="#volver" />
 
-            <Label text="Empleados" />
-            <ListView fx:id="empleadosListView" prefHeight="150" />
+    <!-- Campos de entrada -->
+    <Label layoutX="20.0" layoutY="20.0" text="Nombre" />
+    <TextField fx:id="nombreField" layoutX="80.0" layoutY="16.0" prefWidth="200" />
 
-            <Label text="Seleccionar Bibliotecario para Reporte" />
-            <ComboBox fx:id="bibliotecarioComboBox" />
-            <Button text="Generar Reporte" onAction="#generarReporte" />
+    <Label layoutX="300.0" layoutY="20.0" text="ID" />
+    <TextField fx:id="idField" layoutX="322.0" layoutY="16.0" prefWidth="120" />
 
-            <Label text="Reporte" />
-            <TextArea fx:id="reporteTextArea" prefHeight="200" wrapText="true" />
-        </VBox>
-    </center>
-</BorderPane>
+    <Label layoutX="470.0" layoutY="20.0" text="Correo" />
+    <TextField fx:id="correoField" layoutX="516.0" layoutY="16.0" prefWidth="200" />
+
+    <!-- Botones de acciones -->
+    <Button layoutX="20.0" layoutY="60.0" onAction="#agregarEmpleado" text="Agregar" />
+    <Button layoutX="100.0" layoutY="60.0" onAction="#actualizarEmpleado" text="Actualizar" />
+    <Button layoutX="200.0" layoutY="60.0" onAction="#eliminarEmpleado" text="Eliminar" />
+    <Button layoutX="300.0" layoutY="60.0" onAction="#visualizarEmpleado" text="Visualizar" />
+
+    <!-- Lista de empleados -->
+    <Label layoutX="20.0" layoutY="110.0" text="Empleados" />
+    <ListView fx:id="empleadosListView" layoutX="20.0" layoutY="130.0" prefHeight="150" prefWidth="740" />
+
+    <!-- Reporte -->
+    <Label layoutX="20.0" layoutY="300.0" text="Seleccionar Bibliotecario para Reporte" />
+    <ComboBox fx:id="bibliotecarioComboBox" layoutX="270.0" layoutY="296.0" prefWidth="200" />
+    <Button layoutX="480.0" layoutY="296.0" onAction="#generarReporte" text="Generar Reporte" />
+
+    <Label layoutX="20.0" layoutY="340.0" text="Reporte" />
+    <TextArea fx:id="reporteTextArea" layoutX="20.0" layoutY="360.0" prefHeight="280" prefWidth="740" wrapText="true" />
+
+</AnchorPane>
