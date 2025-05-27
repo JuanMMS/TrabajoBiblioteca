@@ -17,17 +17,14 @@ public class BibliotecarioController {
 
     public void agregarPersona(Persona persona) {
         App.biblioteca.agregarPersona(persona);
-        bibliotecario.agregarPersona(App.biblioteca, persona);
     }
 
     public void actualizarPersona(Persona persona, String nombre, String id) {
         App.biblioteca.actualizarPersona(persona, nombre, id);
-        bibliotecario.actualizarPersona(App.biblioteca, persona, nombre, id);
     }
 
     public void eliminarPersona(Persona persona) {
         App.biblioteca.eliminarPersona(persona);
-        bibliotecario.eliminarPersona(App.biblioteca, persona);
     }
 
     public String visualizarPersona(Persona persona) {
