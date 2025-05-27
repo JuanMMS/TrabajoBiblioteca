@@ -46,23 +46,11 @@ public class Bibliotecario extends Empleado implements GestionLibro{
         List<Persona> listUsuariosConDeuda = new ArrayList<>();
 
         for (Prestamo prestamo : listPrestamosBibliotecario) {
-            reporte += "ID Prestamo: " + prestamo.getId() + "\nPersona a quien se presta: " + prestamo.getPersona().getNombre() + "\nPendiente devolver: " + prestamo.isDevuelto() + "\n\n";
-            /**
-            // Obtener el libro más prestado por el bibliotecario
-            if (prestamo.getLibro() instanceof LibroFisico) {
-                LibroFisico libro = (LibroFisico) prestamo.getLibro();
-                if (libroMasPrestado == null || libro.getVecesPrestado() > libroMasPrestado.getVecesPrestado()) {
-                    libroMasPrestado = libro;
-                }
-            }
-            // Agregar personas con deuda por tener libros prestados
-            Persona persona = prestamo.getPersona();
-            if (!prestamo.isDevuelto() && !listUsuariosConDeuda.contains(persona)) {
-                listUsuariosConDeuda.add(persona);
-            }
-             */
+            Libro libro = prestamo.getLibro();
+            reporte += "ID Prestamo: " + prestamo.getId() + "\nTitulo del libro prestado: "+ libro.getTitulo() + "\nPersona a quien se presta: " + prestamo.getPersona().getNombre() + "\nPendiente devolver: " + prestamo.isDevuelto() + "\n";
         }
-
+        reporte += "\n\nLista de personas con deuda:\n";
+        reporte += nombrePersonasConDeuda() + "\n";
         /**if (libroMasPrestado != null) {
             reporte += "\nLibro más prestado: " + libroMasPrestado.getTitulo() +
                     " (" + libroMasPrestado.getVecesPrestado() + " veces)\n";
@@ -81,6 +69,41 @@ public class Bibliotecario extends Empleado implements GestionLibro{
     }
 
     /**
+     * Método para obtener el libro más prestado de bibliotecario
+     * @return
+     */
+    public Libro libroMasPrestado(){}
+
+    /**
+     * Método para obtener la lista de personas que tienen deuda (no han devuelto el libro)
+     * @return
+     */
+    public List<Persona> listPersonasConDeuda() {
+        List<Persona> listPersonasConDeuda = new ArrayList<>();
+        for (Prestamo prestamo : listPrestamosBibliotecario) {
+            Persona persona = prestamo.getPersona();
+            if (!prestamo.isDevuelto() && !listPersonasConDeuda.contains(persona)) {
+                listPersonasConDeuda.add(persona);
+            }
+        }
+        return listPersonasConDeuda;
+    }
+
+    /**
+     * Método para obtener una lista de nombres de las personas que tienen deuda.
+     * @return
+     */
+    public String nombrePersonasConDeuda() {
+        String listPersonasConDeuda = "";
+        List<Persona> listPersonas = listPersonasConDeuda();
+        for(Persona persona : listPersonas){
+            listPersonasConDeuda += persona.getNombre() + "\n";
+        }
+        return listPersonasConDeuda;
+    }
+
+
+    /**
     *Metodos para la gestion de Personas que recurren la biblioteca
      * @param biblioteca
      */
@@ -95,6 +118,14 @@ public class Bibliotecario extends Empleado implements GestionLibro{
     }
     public void eliminarPersona(Biblioteca biblioteca, Persona persona){
         biblioteca.eliminarPersona(persona);
+    }
+    @Override
+    public List<Prestamo> getListPrestamosBibliotecario() {
+        return listPrestamosBibliotecario;
+    }
+    @Override
+    public void setListPrestamosBibliotecario(List<Prestamo> listPrestamosBibliotecario) {
+        this.listPrestamosBibliotecario = listPrestamosBibliotecario;
     }
 
 
@@ -111,16 +142,6 @@ public class Bibliotecario extends Empleado implements GestionLibro{
      * Creación método getter y setter para el atributo "listPrestamosBlibliotecario"
      * @return
      */
-
-    @Override
-    public List<Prestamo> getListPrestamosBibliotecario() {
-        return listPrestamosBibliotecario;
-    }
-
-    @Override
-    public void setListPrestamosBibliotecario(List<Prestamo> listPrestamosBibliotecario) {
-        this.listPrestamosBibliotecario = listPrestamosBibliotecario;
-    }
 
 
 }

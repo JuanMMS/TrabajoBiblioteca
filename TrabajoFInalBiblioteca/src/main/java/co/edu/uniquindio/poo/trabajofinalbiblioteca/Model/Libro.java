@@ -14,7 +14,7 @@ public class Libro {
      * @param autor
      * @param anioPublicacion
      */
-    public Libro(String Titulo, String autor, int anioPublicacion) {
+    public Libro(String titulo, String autor, int anioPublicacion) {
         this.titulo = titulo;
         this.autor = autor;
         this.anioPublicacion = anioPublicacion;
