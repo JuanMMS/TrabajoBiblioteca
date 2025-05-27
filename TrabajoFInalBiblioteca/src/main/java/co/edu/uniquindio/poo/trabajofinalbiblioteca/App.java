@@ -28,6 +28,21 @@ public class App extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
+    public void openBibliotecarioView(Bibliotecario bibliotecario) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/trabajofinalbiblioteca/bibliotecario_view.fxml"));
+        Parent root = loader.load();
+
+        // Pasar datos al ViewController
+        co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.BibliotecarioViewController controller = loader.getController();
+        controller.setBibliotecaYBibliotecario(biblioteca, bibliotecario);
+
+        Stage stage = new Stage();
+        stage.setTitle("Bienvenido");
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
     //servicios, data basica para la función del programa
 
     public void inicializarData() {
