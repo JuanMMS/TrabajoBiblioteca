@@ -5,11 +5,22 @@
 
 <VBox spacing="10" xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.BibliotecarioViewController">
+      fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.BibliotecarioViewController"
+      alignment="TOP_CENTER" padding="20">
 
-    <Label text="Gestión Bibliotecario" style="-fx-font-size: 18;" />
+    <Label text="Gestión del Bibliotecario" style="-fx-font-size: 18;" />
+
+    <HBox spacing="10">
+        <TextField fx:id="nombreLibroField" promptText="Nombre del libro" />
+        <Button text="Agregar Libro" onAction="#agregarLibro"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <TextField fx:id="nombrePersonaField" promptText="Nombre de la persona" />
+        <Button text="Agregar Persona" onAction="#agregarPersona"/>
+    </HBox>
 
     <Button text="Generar Reporte" onAction="#generarReporte"/>
-    <TextArea fx:id="reporteTextArea" prefRowCount="15"/>
+    <TextArea fx:id="reporteTextArea" prefRowCount="15" prefWidth="400"/>
 
 </VBox>
