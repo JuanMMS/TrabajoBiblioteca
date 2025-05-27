@@ -1,5 +1,6 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController;
 
+import co.edu.uniquindio.poo.trabajofinalbiblioteca.App;
 import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Empleado;
 import co.edu.uniquindio.poo.trabajofinalbiblioteca.controller.LoginController;
 import javafx.event.ActionEvent;
@@ -68,6 +69,7 @@ public class LoginViewController {
         }
 
         Empleado empleado = loginController.autenticar(usuario, contrasenia, rolSeleccionado);
+        App.setEmpleadoActual(empleado);
         if (empleado != null) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(
                     rolSeleccionado.equals("Administrador")

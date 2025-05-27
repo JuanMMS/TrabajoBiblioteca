@@ -5,11 +5,13 @@ import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*;
 import co.edu.uniquindio.poo.trabajofinalbiblioteca.controller.BibliotecarioController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class BibliotecarioViewController {
@@ -34,6 +36,10 @@ public class BibliotecarioViewController {
     @FXML
     private Button btnVolver;
 
+    @FXML
+    private Button agregarPersonaBtn;
+
+
     /**
      * Este método es llamado automáticamente por JavaFX al cargar la vista.
      */
@@ -55,6 +61,9 @@ public class BibliotecarioViewController {
         btnAgregarPersona.setOnAction(e -> agregarPersona());
         btnGenerarReporte.setOnAction(e -> generarReporte());
     }
+
+
+
 
     private void agregarPersona() {
         String nombre = txtNombrePersona.getText().trim();
@@ -113,5 +122,19 @@ public class BibliotecarioViewController {
 
     public void setController(BibliotecarioController controller) {
         this.controller = controller;
+    }
+
+    public void abrirRegistroPrestamo(javafx.event.ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/trabajofinalbiblioteca/prestamo-view.fxml"));
+            Scene nuevaEscena = new Scene(loader.load());
+
+            // Obtenemos el stage a partir del botón que disparó el evento
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(nuevaEscena);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

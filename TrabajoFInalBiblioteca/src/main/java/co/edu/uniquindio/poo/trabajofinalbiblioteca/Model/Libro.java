@@ -64,5 +64,11 @@ public class Libro {
     public void setThePrestamoLibro(Prestamo thePrestamoLibro) {
         this.thePrestamoLibro = thePrestamoLibro;
     }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "Titulo='" + titulo + ", Autor='" + autor;
+    }
 }
 

@@ -34,6 +34,7 @@
     </ComboBox>
 
     <!-- Botones -->
+    <Button fx:id="agregarPersonaBtn" text="Registrar Préstamo" onAction="#abrirRegistroPrestamo" />
     <Button fx:id="btnAgregarPersona" layoutX="300.0" layoutY="170.0" text="Agregar Persona" />
     <Button fx:id="btnGenerarReporte" layoutX="430.0" layoutY="170.0" text="Generar Reporte" />
 

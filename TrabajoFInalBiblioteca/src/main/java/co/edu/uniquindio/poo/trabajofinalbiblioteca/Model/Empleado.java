@@ -83,4 +83,9 @@ public abstract class  Empleado {
     public List<Prestamo> getListPrestamosBibliotecario() {return listPrestamosBibliotecario;}
 
     public void setListPrestamosBibliotecario(List<Prestamo> listPrestamosBibliotecario) {this.listPrestamosBibliotecario = listPrestamosBibliotecario;}
+    @Override
+    public String toString() {
+        return "Nombre: " + nombre + "ID:  " + id + "Usuario:  " + usuario ;
+    }
 }
+

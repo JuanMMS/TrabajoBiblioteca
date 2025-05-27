@@ -11,7 +11,7 @@ public class Biblioteca{
     private List<Empleado> listEmpleados;
     private List<Persona> listPersonas;
     private List<Prestamo> listPrestamos;
-
+    private Empleado empleadoActual;
 
     /**
      * Creación metodo constructor de la clase Biblioteca
@@ -46,6 +46,15 @@ public class Biblioteca{
     }
     public void eliminarPersona(Persona persona){
         listPersonas.remove(persona);
+    }
+
+    public Persona buscarPersona(String nombre) {
+        for (Persona persona : listPersonas) {
+            if (persona.getNombre().equalsIgnoreCase(nombre)) {
+                return persona;
+            }
+        }
+        return null;
     }
 /**
  * CRUD EMPLEADO
@@ -148,5 +157,14 @@ public class Biblioteca{
 
     public void setListPrestamos(List<Prestamo> listPrestamos) {
         this.listPrestamos = listPrestamos;
+    }
+
+
+    public Empleado getEmpleadoActual() {
+        return empleadoActual;
+    }
+
+    public void setEmpleadoActual(Empleado empleadoActual) {
+        this.empleadoActual = empleadoActual;
     }
 }
