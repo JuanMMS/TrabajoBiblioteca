@@ -18,9 +18,8 @@ public class Administrador extends Empleado  {
 
     public String generarReporte(Bibliotecario bibliotecario) {
         String reporte = "";
-        for (Prestamo prestamo : bibliotecario.getListPrestamosBibliotecario()) {
-            reporte += prestamo.toString() + "\n";
-        }
+        reporte += "Reporte del completo bibliotecario:\n";
+        reporte += bibliotecario.generarReporte();
         return reporte;
     }
 
