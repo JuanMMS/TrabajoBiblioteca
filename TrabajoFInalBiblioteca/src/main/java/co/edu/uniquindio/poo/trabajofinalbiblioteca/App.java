@@ -23,6 +23,14 @@ public class App extends Application {
         inicializarData();
         openPrimaryView();
     }
+    // Empleado que esta loggeado
+    public static Empleado getEmpleadoActual() {
+        return biblioteca.getEmpleadoActual();
+    }
+
+    public static void setEmpleadoActual(Empleado empleado) {
+        biblioteca.setEmpleadoActual(empleado);
+    }
 
     private void openPrimaryView() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/trabajofinalbiblioteca/Primary.fxml"));
