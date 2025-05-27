@@ -30,17 +30,17 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-    }
-    }</component>
-  <component name="GithubPullRequestsUISettings">{
-    &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/JuanMMS/TrabajoBiblioteca.git&quot;,
-    &quot;accountId&quot;: &quot;673e4e1a-aedc-4609-8778-5c6fea7f3d43&quot;
-    }
-    }</component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/JuanMMS/TrabajoBiblioteca.git",
+    "accountId": "673e4e1a-aedc-4609-8778-5c6fea7f3d43"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
     &quot;customColor&quot;: &quot;&quot;,
     &quot;associatedIndex&quot;: 3
@@ -56,12 +56,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+    "JUnit.BibliotecarioTest.actualizarPersonaTest.executor": "Run",
+    "JUnit.BibliotecarioTest.agregarLibroTest.executor": "Run",
+    "JUnit.BibliotecarioTest.agregarPersona.executor": "Run",
+    "JUnit.BibliotecarioTest.devolverLibro.executor": "Run",
+    "JUnit.BibliotecarioTest.eliminarPersona.executor": "Run",
     "JUnit.BibliotecarioTest.executor": "Run",
     "JUnit.BibliotecarioTest.generarReporteTest.executor": "Run",
     "JUnit.BibliotecarioTest.listPersonasConDeudaTest.executor": "Run",
     "JUnit.BibliotecarioTest.nombrePersonasConDeuda.executor": "Run",
     "JUnit.BibliotecarioTest.nombrePersonasConDeudaTest.executor": "Run",
     "JUnit.BibliotecarioTest.stringDisponibilidadTest.executor": "Run",
+    "JUnit.BibliotecarioTest.visualizarPersona.executor": "Run",
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
@@ -84,20 +90,7 @@
       <recent name="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BibliotecarioTest.stringDisponibilidadTest">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.App" />
-      <module name="TrabajoFInalBiblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.BibliotecarioTest">
     <configuration name="BibliotecarioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrabajoFInalBiblioteca" />
       <extension name="coverage">
@@ -113,7 +106,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BibliotecarioTest.generarReporteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BibliotecarioTest.actualizarPersonaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrabajoFInalBiblioteca" />
       <extension name="coverage">
         <pattern>
@@ -123,13 +116,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
       <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.BibliotecarioTest" />
-      <option name="METHOD_NAME" value="generarReporteTest" />
+      <option name="METHOD_NAME" value="actualizarPersonaTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BibliotecarioTest.nombrePersonasConDeuda" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BibliotecarioTest.agregarPersona" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrabajoFInalBiblioteca" />
       <extension name="coverage">
         <pattern>
@@ -139,13 +132,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
       <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.BibliotecarioTest" />
-      <option name="METHOD_NAME" value="nombrePersonasConDeuda" />
+      <option name="METHOD_NAME" value="agregarPersona" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BibliotecarioTest.stringDisponibilidadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BibliotecarioTest.eliminarPersona" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrabajoFInalBiblioteca" />
       <extension name="coverage">
         <pattern>
@@ -155,7 +148,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
       <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.BibliotecarioTest" />
-      <option name="METHOD_NAME" value="stringDisponibilidadTest" />
+      <option name="METHOD_NAME" value="eliminarPersona" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BibliotecarioTest.visualizarPersona" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TrabajoFInalBiblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.BibliotecarioTest" />
+      <option name="METHOD_NAME" value="visualizarPersona" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BibliotecarioTest.stringDisponibilidadTest" />
-        <item itemvalue="JUnit.BibliotecarioTest.nombrePersonasConDeuda" />
-        <item itemvalue="JUnit.BibliotecarioTest.generarReporteTest" />
         <item itemvalue="JUnit.BibliotecarioTest" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.BibliotecarioTest.eliminarPersona" />
+        <item itemvalue="JUnit.BibliotecarioTest.actualizarPersonaTest" />
+        <item itemvalue="JUnit.BibliotecarioTest.visualizarPersona" />
+        <item itemvalue="JUnit.BibliotecarioTest.agregarPersona" />
       </list>
     </recent_temporary>
   </component>
@@ -190,10 +199,22 @@
       <workItem from="1748145945376" duration="1475000" />
       <workItem from="1748147616312" duration="278000" />
       <workItem from="1748309139053" duration="3371000" />
+      <workItem from="1748317435599" duration="1639000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/BibliotecarioTest.java</url>
+          <line>270</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
