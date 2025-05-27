@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="Default" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/AdministradorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/AdministradorTest.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="dev_juanjo" />
+        <entry key="$PROJECT_DIR$/.." value="dev_juanma" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -35,12 +35,12 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/JuanMMS/TrabajoBiblioteca.git&quot;,
-    &quot;accountId&quot;: &quot;c30c9caf-21ed-4af8-a8c9-2815295fdc24&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/JuanMMS/TrabajoBiblioteca.git",
+    "accountId": "673e4e1a-aedc-4609-8778-5c6fea7f3d43"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
@@ -56,15 +56,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
-    "JUnit.AdministradorTest.actualizarEmpleado.executor": "Run",
-    "JUnit.AdministradorTest.agregarEmpleado.executor": "Run",
-    "JUnit.AdministradorTest.testGenerarReporte.executor": "Run",
-    "JUnit.AdministradorTest.visualizarEmpleado.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "dev__sofia",
+
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/POOI-Proyectos/empresaJFX",
     "node.js.detected.package.eslint": "true",
@@ -75,80 +67,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.AdministradorTest.eliminarEmpleado">
-    <configuration name="AdministradorTest.actualizarEmpleado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrabajoFInalBiblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.AdministradorTest" />
-      <option name="METHOD_NAME" value="actualizarEmpleado" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdministradorTest.agregarEmpleado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrabajoFInalBiblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.AdministradorTest" />
-      <option name="METHOD_NAME" value="agregarEmpleado" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdministradorTest.eliminarEmpleado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrabajoFInalBiblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.AdministradorTest" />
-      <option name="METHOD_NAME" value="eliminarEmpleado" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdministradorTest.testGenerarReporte" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrabajoFInalBiblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.AdministradorTest" />
-      <option name="METHOD_NAME" value="testGenerarReporte" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdministradorTest.visualizarEmpleado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+
       <module name="TrabajoFInalBiblioteca" />
       <extension name="coverage">
         <pattern>
@@ -164,13 +83,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BibliotecarioTest.generarReporteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TrabajoFInalBiblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.BibliotecarioTest" />
+      <option name="METHOD_NAME" value="generarReporteTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AdministradorTest.eliminarEmpleado" />
-        <item itemvalue="JUnit.AdministradorTest.actualizarEmpleado" />
-        <item itemvalue="JUnit.AdministradorTest.visualizarEmpleado" />
-        <item itemvalue="JUnit.AdministradorTest.agregarEmpleado" />
-        <item itemvalue="JUnit.AdministradorTest.testGenerarReporte" />
+
       </list>
     </recent_temporary>
   </component>
@@ -192,6 +123,7 @@
       <workItem from="1748143082646" duration="1882000" />
       <workItem from="1748145945376" duration="1475000" />
       <workItem from="1748147616312" duration="278000" />
+      <workItem from="1748305752630" duration="2816000" />
     </task>
     <servers />
   </component>
