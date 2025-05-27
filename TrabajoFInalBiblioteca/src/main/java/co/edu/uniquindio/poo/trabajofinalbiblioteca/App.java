@@ -69,7 +69,7 @@ public class App extends Application {
         LibroFisico libroFisico2 = new LibroFisico("100 años de soledad", "Gabriel", 1980, 170, "Normal", "A24");
         LibroFisico libroFisico3 = new LibroFisico("La ciudad y los perros", "Andres", 2001, 210, "Caracol", "A24");
         Prestamo prestamo1 = new Prestamo("1A2B", libroFisico1, 2, estudiante, bibliotecario1);
-        Prestamo prestamo2 = new Prestamo("2C,3D", libroFisico2, 1, estudiante, bibliotecario1);
+        Prestamo prestamo2 = new Prestamo("2C", libroFisico2, 1, estudiante, bibliotecario1);
         // Agregar empleados
         biblioteca.agregarEmpleado(bibliotecario1);
         biblioteca.agregarEmpleado(admin);

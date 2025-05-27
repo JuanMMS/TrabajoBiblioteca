@@ -33,7 +33,7 @@ public class Bibliotecario extends Empleado {
 
         for (Prestamo prestamo : listPrestamosBibliotecario) {
             Libro libro = prestamo.getLibro();
-            reporte += "ID Prestamo: " + prestamo.getId() + "\nTitulo del libro prestado: "+ libro.getTitulo() + "\nPersona a quien se presta: " + prestamo.getPersona().getNombre() + "\nEstado del libro: " + stringDisponibilidad(prestamo.isDevuelto()) + "\n";
+            reporte += "ID Prestamo: " + prestamo.getId() + "\nTitulo del libro prestado: "+ libro.getTitulo() + "\nPersona a quien se presta: " + prestamo.getPersona().getNombre() + "\nEstado del libro: " + stringDisponibilidad(prestamo.isDevuelto()) + "\n\n";
         }
         reporte += "\n\nLista de personas con deuda:\n";
         reporte += nombrePersonasConDeuda() + "\n\n";
