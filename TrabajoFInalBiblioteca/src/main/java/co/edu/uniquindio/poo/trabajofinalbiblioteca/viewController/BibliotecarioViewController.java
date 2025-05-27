@@ -30,22 +30,25 @@ public class BibliotecarioViewController {
     @FXML
     private TextArea txtAreaReporte;
 
-    private BibliotecarioController controller;
-
     @FXML
     private Button btnVolver;
 
     @FXML
     private Button agregarPersonaBtn;
 
+    @FXML
+    private Button btnActualizarPersona;
 
-    /**
-     * Este método es llamado automáticamente por JavaFX al cargar la vista.
-     */
+    @FXML
+    private Button btnEliminarPersona;
+
+    @FXML
+    private ComboBox<String> comboTipoPersona;
+
+    private BibliotecarioController controller;
+
     @FXML
     public void initialize() {
-
-        // Recuperar bibliotecario que inició sesión (solo si ya está cargado en App.biblioteca)
         Bibliotecario bibliotecario = obtenerBibliotecarioLogueado();
 
         if (bibliotecario != null) {
@@ -60,20 +63,57 @@ public class BibliotecarioViewController {
         btnVolver.setOnAction(e -> volver());
         btnAgregarPersona.setOnAction(e -> agregarPersona());
         btnGenerarReporte.setOnAction(e -> generarReporte());
+        btnActualizarPersona.setOnAction(e -> actualizarPersona());
+        btnEliminarPersona.setOnAction(e -> eliminarPersona());
     }
 
     private void agregarPersona() {
         String nombre = txtNombrePersona.getText().trim();
         String id = txtIdPersona.getText().trim();
+        String tipo = comboTipoPersona.getValue();
 
-        if (nombre.isEmpty() || id.isEmpty()) {
+        if (nombre.isEmpty() || id.isEmpty() || tipo == null) {
             mostrarMensaje("Debe llenar todos los campos para agregar una persona.");
             return;
         }
 
-        Persona nuevaPersona = new Visitante(nombre, id); // Por defecto se agrega como Visitante
+        Persona nuevaPersona = switch (tipo) {
+            case "Estudiante" -> new Estudiante(nombre, id);
+            case "Docente" -> new Docente(nombre, id);
+            default -> new Visitante(nombre, id);
+        };
+
         controller.agregarPersona(nuevaPersona);
         mostrarMensaje("Persona agregada correctamente.");
+        limpiarCampos();
+    }
+
+    private void actualizarPersona() {
+        String nombre = txtNombrePersona.getText().trim();
+        String id = txtIdPersona.getText().trim();
+
+        Persona persona = App.biblioteca.buscarPersonaPorId(id);
+
+        if (persona == null) {
+            mostrarMensaje("No se encontró la persona con ID: " + id);
+            return;
+        }
+
+        controller.actualizarPersona(persona, nombre, id);
+        mostrarMensaje("Persona actualizada correctamente.");
+    }
+
+    private void eliminarPersona() {
+        String id = txtIdPersona.getText().trim();
+        Persona persona = App.biblioteca.buscarPersonaPorId(id);
+
+        if (persona == null) {
+            mostrarMensaje("No se encontró la persona con ID: " + id);
+            return;
+        }
+
+        controller.eliminarPersona(persona);
+        mostrarMensaje("Persona eliminada correctamente.");
         limpiarCampos();
     }
 
@@ -106,6 +146,7 @@ public class BibliotecarioViewController {
     private void limpiarCampos() {
         txtNombrePersona.clear();
         txtIdPersona.clear();
+        comboTipoPersona.getSelectionModel().clearSelection();
     }
 
     private void mostrarMensaje(String mensaje) {

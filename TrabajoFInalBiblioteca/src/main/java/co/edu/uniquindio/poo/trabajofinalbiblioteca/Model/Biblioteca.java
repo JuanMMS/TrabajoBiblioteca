@@ -56,6 +56,14 @@ public class Biblioteca{
         }
         return null;
     }
+    public Persona buscarPersonaPorId(String id) {
+        for (Persona persona : listPersonas) {
+            if (persona.getId().equals(id)) {
+                return persona;
+            }
+        }
+        return null; // Si no se encuentra, retorna null
+    }
 /**
  * CRUD EMPLEADO
  */
@@ -167,4 +175,5 @@ public class Biblioteca{
     public void setEmpleadoActual(Empleado empleadoActual) {
         this.empleadoActual = empleadoActual;
     }
+
 }
