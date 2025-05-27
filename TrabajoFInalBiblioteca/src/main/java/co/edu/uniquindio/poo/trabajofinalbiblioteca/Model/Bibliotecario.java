@@ -72,7 +72,29 @@ public class Bibliotecario extends Empleado implements GestionLibro{
      * Método para obtener el libro más prestado de bibliotecario
      * @return
      */
-    public Libro libroMasPrestado(){}
+   /** public String libroMasPrestado(){
+        Libro libroMasPrestado = null;
+        String tituloMasPrestado = "";
+        for(Prestamo prestamo : listPrestamosBibliotecario){
+            if(libroMasPrestado != null) {
+                tituloMasPrestado += "\nLibro más prestado: " + libroMasPrestado.getTitulo() +
+                        " (" + libroMasPrestado.getVecesPrestado() + " veces)\n";
+            } else {
+                tituloMasPrestado += "\nNo se encontraron préstamos.\n";
+            }
+            tituloMasPrestado += "\nUsuarios con deudas:\n";
+            if (listUsuariosConDeuda.isEmpty()) {
+                tituloMasPrestado += "- No hay usuarios con deudas.\n";
+            } else {
+                for (Persona persona : listUsuariosConDeuda) {
+                    tituloMasPrestado += "- " + persona.getNombre() + "\n";
+                }
+            }
+
+        }
+
+    }
+    /*
 
     /**
      * Método para obtener la lista de personas que tienen deuda (no han devuelto el libro)
