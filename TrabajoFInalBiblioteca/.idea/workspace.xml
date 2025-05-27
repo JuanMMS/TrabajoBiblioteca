@@ -9,13 +9,6 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/viewController/PrestamoViewController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/poo/trabajofinalbiblioteca/prestamo-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Biblioteca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/Libro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/viewController/BibliotecarioViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/viewController/BibliotecarioViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/viewController/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/viewController/LoginViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/poo/trabajofinalbiblioteca/bibliotecario_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/poo/trabajofinalbiblioteca/bibliotecario_view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,20 +33,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
+  &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="GithubPullRequestsUISettings">{
-    &quot;selectedUrlAndAccountId&quot;: {
+  &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/JuanMMS/TrabajoBiblioteca.git&quot;,
     &quot;accountId&quot;: &quot;673e4e1a-aedc-4609-8778-5c6fea7f3d43&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="ProjectColorInfo">{
-    &quot;customColor&quot;: &quot;&quot;,
-    &quot;associatedIndex&quot;: 3
-    }</component>
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2xZQNrs8kJrAS3AbDgAIFi4cNca" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -65,13 +58,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
-    "JUnit.BibliotecarioTest.generarReporteTest.executor": "Run",
-    "JUnit.BibliotecarioTest.listPersonasConDeudaTest.executor": "Run",
-    "JUnit.BibliotecarioTest.nombrePersonasConDeudaTest.executor": "Run",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "dev__juanjo",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/POOI-Proyectos/empresaJFX",
     "node.js.detected.package.eslint": "true",
@@ -90,7 +76,7 @@
       <recent name="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.BibliotecarioTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.App" />
       <module name="TrabajoFInalBiblioteca" />
@@ -120,7 +106,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BibliotecarioTest.listPersonasConDeudaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrabajoFInalBiblioteca" />
       <extension name="coverage">
         <pattern>
@@ -130,7 +115,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
       <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.BibliotecarioTest" />
-      <option name="METHOD_NAME" value="listPersonasConDeudaTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,10 +138,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.BibliotecarioTest" />
         <item itemvalue="JUnit.BibliotecarioTest.generarReporteTest" />
-        <item itemvalue="JUnit.BibliotecarioTest.nombrePersonasConDeudaTest" />
-        <item itemvalue="JUnit.BibliotecarioTest.listPersonasConDeudaTest" />
+        <item itemvalue="JUnit.BibliotecarioTest.libroMasPrestadoTest" />
+        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -180,6 +164,7 @@
       <workItem from="1748145945376" duration="1475000" />
       <workItem from="1748147616312" duration="278000" />
       <workItem from="1748309139053" duration="3371000" />
+      <workItem from="1748315316490" duration="990000" />
     </task>
     <servers />
   </component>
