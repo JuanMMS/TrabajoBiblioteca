@@ -11,7 +11,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class BibliotecarioViewController {
@@ -45,6 +44,7 @@ public class BibliotecarioViewController {
      */
     @FXML
     public void initialize() {
+
         // Recuperar bibliotecario que inició sesión (solo si ya está cargado en App.biblioteca)
         Bibliotecario bibliotecario = obtenerBibliotecarioLogueado();
 
@@ -61,9 +61,6 @@ public class BibliotecarioViewController {
         btnAgregarPersona.setOnAction(e -> agregarPersona());
         btnGenerarReporte.setOnAction(e -> generarReporte());
     }
-
-
-
 
     private void agregarPersona() {
         String nombre = txtNombrePersona.getText().trim();
@@ -86,7 +83,6 @@ public class BibliotecarioViewController {
     }
 
     private Bibliotecario obtenerBibliotecarioLogueado() {
-        // Buscar entre empleados el primero que sea Bibliotecario
         for (Empleado empleado : App.biblioteca.getListEmpleados()) {
             if (empleado instanceof Bibliotecario) {
                 return (Bibliotecario) empleado;
@@ -129,7 +125,6 @@ public class BibliotecarioViewController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/trabajofinalbiblioteca/prestamo-view.fxml"));
             Scene nuevaEscena = new Scene(loader.load());
 
-            // Obtenemos el stage a partir del botón que disparó el evento
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(nuevaEscena);
             stage.show();

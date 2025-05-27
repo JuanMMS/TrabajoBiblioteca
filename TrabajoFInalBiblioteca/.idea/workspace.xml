@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="Default" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/BibliotecarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/poo/trabajofinalbiblioteca/Model/BibliotecarioTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +37,6 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/JuanMMS/TrabajoBiblioteca.git",
-    "accountId": "673e4e1a-aedc-4609-8778-5c6fea7f3d43"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -53,35 +51,8 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "JUnit.BibliotecarioTest.actualizarPersonaTest.executor": "Run",
-    "JUnit.BibliotecarioTest.agregarLibroTest.executor": "Run",
-    "JUnit.BibliotecarioTest.agregarPersona.executor": "Run",
-    "JUnit.BibliotecarioTest.devolverLibro.executor": "Run",
-    "JUnit.BibliotecarioTest.eliminarPersona.executor": "Run",
-    "JUnit.BibliotecarioTest.executor": "Run",
-    "JUnit.BibliotecarioTest.generarReporteTest.executor": "Run",
-    "JUnit.BibliotecarioTest.listPersonasConDeudaTest.executor": "Run",
-    "JUnit.BibliotecarioTest.nombrePersonasConDeuda.executor": "Run",
-    "JUnit.BibliotecarioTest.nombrePersonasConDeudaTest.executor": "Run",
-    "JUnit.BibliotecarioTest.stringDisponibilidadTest.executor": "Run",
-    "JUnit.BibliotecarioTest.visualizarPersona.executor": "Run",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "dev__juanma",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/POOI-Proyectos/empresaJFX",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -90,23 +61,6 @@
       <recent name="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BibliotecarioTest">
-    <configuration name="BibliotecarioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrabajoFInalBiblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.BibliotecarioTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BibliotecarioTest.actualizarPersonaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrabajoFInalBiblioteca" />
       <extension name="coverage">
         <pattern>
@@ -138,7 +92,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BibliotecarioTest.eliminarPersona" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrabajoFInalBiblioteca" />
       <extension name="coverage">
         <pattern>
@@ -148,7 +101,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model" />
       <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.BibliotecarioTest" />
-      <option name="METHOD_NAME" value="eliminarPersona" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,11 +124,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BibliotecarioTest" />
-        <item itemvalue="JUnit.BibliotecarioTest.eliminarPersona" />
-        <item itemvalue="JUnit.BibliotecarioTest.actualizarPersonaTest" />
-        <item itemvalue="JUnit.BibliotecarioTest.visualizarPersona" />
-        <item itemvalue="JUnit.BibliotecarioTest.agregarPersona" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +146,6 @@
       <workItem from="1748145945376" duration="1475000" />
       <workItem from="1748147616312" duration="278000" />
       <workItem from="1748309139053" duration="3371000" />
-      <workItem from="1748317435599" duration="1639000" />
     </task>
     <servers />
   </component>
