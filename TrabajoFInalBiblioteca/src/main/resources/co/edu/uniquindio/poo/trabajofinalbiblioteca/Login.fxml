@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1"
             xmlns="http://javafx.com/javafx/17.0.12"
-            fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.LoginViewController">
-    <VBox alignment="CENTER" spacing="10.0" prefWidth="300.0"
-          AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
-          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            fx:controller="co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController.LoginViewController"
+            prefWidth="400.0" prefHeight="300.0">
 
-        <Label text="Inicio de Sesión" style="-fx-font-size: 20px;" />
+    <Label layoutX="140.0" layoutY="40.0" text="Inicio de Sesión" style="-fx-font-size: 20px;" />
 
-        <TextField fx:id="usuarioField" promptText="Usuario" />
-        <PasswordField fx:id="contraseniaField" promptText="Contraseña" />
+    <TextField fx:id="usuarioField" layoutX="100.0" layoutY="90.0" prefWidth="200.0" promptText="Usuario" />
+    <PasswordField fx:id="contraseniaField" layoutX="100.0" layoutY="130.0" prefWidth="200.0" promptText="Contraseña" />
 
-        <HBox spacing="10" alignment="CENTER">
-            <RadioButton fx:id="adminRadioBtn" text="Administrador" toggleGroup="$rolGroup"/>
-            <RadioButton fx:id="bibliotecarioRadioBtn" text="Bibliotecario" toggleGroup="$rolGroup"/>
-        </HBox>
+    <RadioButton fx:id="adminRadioBtn" layoutX="100.0" layoutY="170.0" text="Administrador" toggleGroup="$rolGroup" />
+    <RadioButton fx:id="bibliotecarioRadioBtn" layoutX="220.0" layoutY="170.0" text="Bibliotecario" toggleGroup="$rolGroup" />
 
-        <Button fx:id="ingresarBtn" text="Ingresar" onAction="#ingresar" />
-    </VBox>
+    <Button fx:id="ingresarBtn" layoutX="160.0" layoutY="210.0" text="Ingresar" onAction="#ingresar" />
+
 </AnchorPane>

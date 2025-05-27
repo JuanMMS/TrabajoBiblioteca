@@ -1,10 +1,9 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.controller;
 
-import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Biblioteca;
-import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Bibliotecario;
-import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Libro;
-import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Persona;
-import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Prestamo;
+import co.edu.uniquindio.poo.trabajofinalbiblioteca.App;
+import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*;
+
+import java.util.List;
 
 public class BibliotecarioController {
 
@@ -13,26 +12,55 @@ public class BibliotecarioController {
     public BibliotecarioController(Bibliotecario bibliotecario) {
         this.bibliotecario = bibliotecario;
     }
+    // ========== PERSONAS ==========
 
-    public void agregarPrestamo(Biblioteca biblioteca, Prestamo prestamo) {
-        bibliotecario.agregarPrestamo(biblioteca, prestamo);
+    public void agregarPersona(Persona persona) {
+        App.biblioteca.agregarPersona(persona);
+        bibliotecario.agregarPersona(App.biblioteca, persona);
+    }
+
+    public void actualizarPersona(Persona persona, String nombre, String id) {
+        App.biblioteca.actualizarPersona(persona, nombre, id);
+        bibliotecario.actualizarPersona(App.biblioteca, persona, nombre, id);
+    }
+
+    public void eliminarPersona(Persona persona) {
+        App.biblioteca.eliminarPersona(persona);
+        bibliotecario.eliminarPersona(App.biblioteca, persona);
+    }
+
+    public String visualizarPersona(Persona persona) {
+        return App.biblioteca.visualizarPersona(persona);
+    }
+
+    // ========== LIBROS ==========
+
+    public void agregarLibro(Libro libro) {
+        App.biblioteca.agregarLibro(libro);
+        bibliotecario.agregarLibro(App.biblioteca, libro);
     }
 
     public void devolverLibro(Prestamo prestamo) {
         bibliotecario.devolverLibro(prestamo);
     }
 
+    // ========== PRÉSTAMOS ==========
+
+    public void agregarPrestamo(Prestamo prestamo) {
+        bibliotecario.agregarPrestamo(App.biblioteca, prestamo);
+    }
+
+    public List<Prestamo> obtenerPrestamos() {
+        return bibliotecario.getListPrestamosBibliotecario();
+    }
+
+    // ========== REPORTES ==========
+
     public String generarReporte() {
         return bibliotecario.generarReporte();
     }
 
-    public void agregarLibro(Biblioteca biblioteca, Libro libro) {
-        bibliotecario.agregarLibro(biblioteca, libro);
-    }
-
-    public void agregarPersona(Biblioteca biblioteca, Persona persona) {
-        bibliotecario.agregarPersona(biblioteca, persona);
-    }
+    // ========== GETTER ==========
 
     public Bibliotecario getBibliotecario() {
         return bibliotecario;
