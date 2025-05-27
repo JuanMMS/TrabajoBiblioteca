@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Bibliotecario extends Empleado implements GestionLibro{
+public class Bibliotecario extends Empleado {
     private List<Prestamo> listPrestamosBibliotecario;
 
     /**
@@ -119,14 +119,14 @@ public class Bibliotecario extends Empleado implements GestionLibro{
     /**
      * Metodo para agregar un libro a la biblioteca
      */
-    @Override
+
     public void agregarLibro(Biblioteca biblioteca, Libro libro) {
         biblioteca.agregarLibro(libro);
     }
     /**
      * Metodo para devolver un libro prestado
      */
-    @Override
+
     public void devolverLibro(Prestamo prestamo) {
         prestamo.devolverLibro();
     }
@@ -148,11 +148,10 @@ public class Bibliotecario extends Empleado implements GestionLibro{
     public void eliminarPersona(Biblioteca biblioteca, Persona persona){
         biblioteca.eliminarPersona(persona);
     }
-    @Override
+
     public List<Prestamo> getListPrestamosBibliotecario() {
         return listPrestamosBibliotecario;
     }
-    @Override
     public void setListPrestamosBibliotecario(List<Prestamo> listPrestamosBibliotecario) {
         this.listPrestamosBibliotecario = listPrestamosBibliotecario;
     }
