@@ -1,7 +1,9 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.Model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Bibliotecario extends Empleado implements GestionLibro{
     private List<Prestamo> listPrestamosBibliotecario;
@@ -20,23 +22,6 @@ public class Bibliotecario extends Empleado implements GestionLibro{
     }
 
     /**
-     * Metodo para agregar un libro a la biblioteca
-     */
-    @Override
-    public void agregarLibro(Biblioteca biblioteca, Libro libro) {
-        biblioteca.agregarLibro(libro);
-
-
-    }
-    /**
-     * Metodo para devolver un libro prestado
-     */
-    @Override
-    public void devolverLibro(Prestamo prestamo) {
-        prestamo.devolverLibro();
-    }
-
-    /**
      * Metodo de bibliotecario para generar reportes
      * @return
      */
@@ -50,21 +35,9 @@ public class Bibliotecario extends Empleado implements GestionLibro{
             reporte += "ID Prestamo: " + prestamo.getId() + "\nTitulo del libro prestado: "+ libro.getTitulo() + "\nPersona a quien se presta: " + prestamo.getPersona().getNombre() + "\nPendiente devolver: " + prestamo.isDevuelto() + "\n";
         }
         reporte += "\n\nLista de personas con deuda:\n";
-        reporte += nombrePersonasConDeuda() + "\n";
-        /**if (libroMasPrestado != null) {
-            reporte += "\nLibro más prestado: " + libroMasPrestado.getTitulo() +
-                    " (" + libroMasPrestado.getVecesPrestado() + " veces)\n";
-        } else {
-            reporte += "\nNo se encontraron préstamos.\n";
-        }
-        reporte += "\nUsuarios con deudas:\n";
-        if (listUsuariosConDeuda.isEmpty()) {
-            reporte += "- No hay usuarios con deudas.\n";
-        } else {
-            for (Persona persona : listUsuariosConDeuda) {
-                reporte += "- " + persona.getNombre() + "\n";
-            }
-        }*/
+        reporte += nombrePersonasConDeuda() + "\n\n";
+        reporte += libroMasPrestado();
+
         return reporte;
     }
 
@@ -72,29 +45,30 @@ public class Bibliotecario extends Empleado implements GestionLibro{
      * Método para obtener el libro más prestado de bibliotecario
      * @return
      */
-   /** public String libroMasPrestado(){
-        Libro libroMasPrestado = null;
-        String tituloMasPrestado = "";
-        for(Prestamo prestamo : listPrestamosBibliotecario){
-            if(libroMasPrestado != null) {
-                tituloMasPrestado += "\nLibro más prestado: " + libroMasPrestado.getTitulo() +
-                        " (" + libroMasPrestado.getVecesPrestado() + " veces)\n";
-            } else {
-                tituloMasPrestado += "\nNo se encontraron préstamos.\n";
-            }
-            tituloMasPrestado += "\nUsuarios con deudas:\n";
-            if (listUsuariosConDeuda.isEmpty()) {
-                tituloMasPrestado += "- No hay usuarios con deudas.\n";
-            } else {
-                for (Persona persona : listUsuariosConDeuda) {
-                    tituloMasPrestado += "- " + persona.getNombre() + "\n";
-                }
-            }
-
+    public String libroMasPrestado() {
+        if (listPrestamosBibliotecario == null || listPrestamosBibliotecario.isEmpty()) {
+            return "No se encontraron préstamos.";
         }
 
+        // Mapa para contar cuántas veces ha sido prestado cada libro
+        Map<String, Integer> contadorPrestamos = new HashMap<>();
+
+        for (Prestamo prestamo : listPrestamosBibliotecario) {
+            String titulo = prestamo.getLibro().getTitulo();
+            contadorPrestamos.put(titulo, contadorPrestamos.getOrDefault(titulo, 0) + 1);
+        }
+
+        String libroMasPrestado = null;
+        int maxPrestamos = 0;
+
+        for (Map.Entry<String, Integer> entry : contadorPrestamos.entrySet()) {
+            if (entry.getValue() > maxPrestamos) {
+                libroMasPrestado = entry.getKey();
+                maxPrestamos = entry.getValue();
+            }
+        }
+        return "Libro más prestado: " + libroMasPrestado + " (" + maxPrestamos + " veces)";
     }
-    /*
 
     /**
      * Método para obtener la lista de personas que tienen deuda (no han devuelto el libro)
@@ -122,6 +96,21 @@ public class Bibliotecario extends Empleado implements GestionLibro{
             listPersonasConDeuda += persona.getNombre() + "\n";
         }
         return listPersonasConDeuda;
+    }
+
+    /**
+     * Metodo para agregar un libro a la biblioteca
+     */
+    @Override
+    public void agregarLibro(Biblioteca biblioteca, Libro libro) {
+        biblioteca.agregarLibro(libro);
+    }
+    /**
+     * Metodo para devolver un libro prestado
+     */
+    @Override
+    public void devolverLibro(Prestamo prestamo) {
+        prestamo.devolverLibro();
     }
 
 
