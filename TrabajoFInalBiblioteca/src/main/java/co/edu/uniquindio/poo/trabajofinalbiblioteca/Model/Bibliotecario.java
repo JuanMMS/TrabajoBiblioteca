@@ -27,12 +27,13 @@ public class Bibliotecario extends Empleado implements GestionLibro{
      */
     public String generarReporte() {
         String reporte = "Reporte de préstamos de " + getNombre() + ":\n";
-        LibroFisico libroMasPrestado = null;
-        List<Persona> listUsuariosConDeuda = new ArrayList<>();
+        if (listPrestamosBibliotecario == null || listPrestamosBibliotecario.isEmpty()) {
+            return "No se encontraron préstamos.";
+        }
 
         for (Prestamo prestamo : listPrestamosBibliotecario) {
             Libro libro = prestamo.getLibro();
-            reporte += "ID Prestamo: " + prestamo.getId() + "\nTitulo del libro prestado: "+ libro.getTitulo() + "\nPersona a quien se presta: " + prestamo.getPersona().getNombre() + "\nPendiente devolver: " + prestamo.isDevuelto() + "\n";
+            reporte += "ID Prestamo: " + prestamo.getId() + "\nTitulo del libro prestado: "+ libro.getTitulo() + "\nPersona a quien se presta: " + prestamo.getPersona().getNombre() + "\nEstado del libro: " + stringDisponibilidad(prestamo.isDevuelto()) + "\n";
         }
         reporte += "\n\nLista de personas con deuda:\n";
         reporte += nombrePersonasConDeuda() + "\n\n";
@@ -40,6 +41,23 @@ public class Bibliotecario extends Empleado implements GestionLibro{
 
         return reporte;
     }
+
+    /**
+     * Método para verificar disponibilidad del libro.
+     * @param disponibilidad
+     * @return
+     */
+    public String stringDisponibilidad(boolean disponibilidad) {
+        String disponibilidadString = "";
+        if(disponibilidad) {
+            disponibilidadString = "Devuelto";
+        }
+        else {
+            disponibilidadString = "Pendiente devolución";
+        }
+        return disponibilidadString;
+    }
+
 
     /**
      * Método para obtener el libro más prestado de bibliotecario
