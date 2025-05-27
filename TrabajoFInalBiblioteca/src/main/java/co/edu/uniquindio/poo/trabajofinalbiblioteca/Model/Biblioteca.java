@@ -133,4 +133,20 @@ public class Biblioteca{
     public void setListEmpleados(List<Empleado> listEmpleados) {
         this.listEmpleados = listEmpleados;
     }
+
+    public List<Persona> getListPersonas() {
+        return listPersonas;
+    }
+
+    public void setListPersonas(List<Persona> listPersonas) {
+        this.listPersonas = listPersonas;
+    }
+
+    public List<Prestamo> getListPrestamos() {
+        return listPrestamos;
+    }
+
+    public void setListPrestamos(List<Prestamo> listPrestamos) {
+        this.listPrestamos = listPrestamos;
+    }
 }

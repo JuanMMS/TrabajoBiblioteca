@@ -1,59 +1,117 @@
 package co.edu.uniquindio.poo.trabajofinalbiblioteca.viewController;
 
-import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Biblioteca;
-import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Bibliotecario;
-import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.LibroFisico;
-import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Persona;
-import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.Estudiante;
+import co.edu.uniquindio.poo.trabajofinalbiblioteca.App;
+import co.edu.uniquindio.poo.trabajofinalbiblioteca.Model.*;
 import co.edu.uniquindio.poo.trabajofinalbiblioteca.controller.BibliotecarioController;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class BibliotecarioViewController {
 
     @FXML
-    private TextArea reporteTextArea;
+    private TextField txtNombrePersona;
 
     @FXML
-    private TextField nombreLibroField;
+    private TextField txtIdPersona;
 
     @FXML
-    private TextField nombrePersonaField;
-
-    private BibliotecarioController bibliotecarioController;
-    private Biblioteca biblioteca;
-
-    public void setBibliotecaYBibliotecario(Biblioteca biblioteca, Bibliotecario bibliotecario) {
-        this.biblioteca = biblioteca;
-        this.bibliotecarioController = new BibliotecarioController(bibliotecario);
-    }
+    private Button btnAgregarPersona;
 
     @FXML
-    private void generarReporte() {
-        String reporte = bibliotecarioController.generarReporte();
-        reporteTextArea.setText(reporte);
-    }
+    private Button btnGenerarReporte;
 
     @FXML
-    private void agregarLibro() {
-        String nombreLibro = nombreLibroField.getText();
-        if (!nombreLibro.isEmpty()) {
-            LibroFisico libro = new LibroFisico(nombreLibro, "Autor", 2024, 100, "Normal", "A1");
-            bibliotecarioController.agregarLibro(biblioteca, libro);
-            reporteTextArea.setText("Libro agregado: " + nombreLibro);
-            nombreLibroField.clear();
+    private TextArea txtAreaReporte;
+
+    private BibliotecarioController controller;
+
+    @FXML
+    private Button btnVolver;
+
+    /**
+     * Este método es llamado automáticamente por JavaFX al cargar la vista.
+     */
+    @FXML
+    public void initialize() {
+        // Recuperar bibliotecario que inició sesión (solo si ya está cargado en App.biblioteca)
+        Bibliotecario bibliotecario = obtenerBibliotecarioLogueado();
+
+        if (bibliotecario != null) {
+            this.controller = new BibliotecarioController(bibliotecario);
+            inicializarEventos();
+        } else {
+            mostrarMensaje("Error: No se pudo obtener el bibliotecario.");
         }
     }
 
-    @FXML
+    private void inicializarEventos() {
+        btnVolver.setOnAction(e -> volver());
+        btnAgregarPersona.setOnAction(e -> agregarPersona());
+        btnGenerarReporte.setOnAction(e -> generarReporte());
+    }
+
     private void agregarPersona() {
-        String nombrePersona = nombrePersonaField.getText();
-        if (!nombrePersona.isEmpty()) {
-            Persona persona = new Estudiante(nombrePersona, "X001");
-            bibliotecarioController.agregarPersona(biblioteca, persona);
-            reporteTextArea.setText("Persona agregada: " + nombrePersona);
-            nombrePersonaField.clear();
+        String nombre = txtNombrePersona.getText().trim();
+        String id = txtIdPersona.getText().trim();
+
+        if (nombre.isEmpty() || id.isEmpty()) {
+            mostrarMensaje("Debe llenar todos los campos para agregar una persona.");
+            return;
         }
+
+        Persona nuevaPersona = new Visitante(nombre, id); // Por defecto se agrega como Visitante
+        controller.agregarPersona(nuevaPersona);
+        mostrarMensaje("Persona agregada correctamente.");
+        limpiarCampos();
+    }
+
+    private void generarReporte() {
+        String reporte = controller.generarReporte();
+        txtAreaReporte.setText(reporte);
+    }
+
+    private Bibliotecario obtenerBibliotecarioLogueado() {
+        // Buscar entre empleados el primero que sea Bibliotecario
+        for (Empleado empleado : App.biblioteca.getListEmpleados()) {
+            if (empleado instanceof Bibliotecario) {
+                return (Bibliotecario) empleado;
+            }
+        }
+        return null;
+    }
+
+    private void volver() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/trabajofinalbiblioteca/Primary.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) btnVolver.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            mostrarMensaje("Error al volver: " + e.getMessage());
+        }
+    }
+
+    private void limpiarCampos() {
+        txtNombrePersona.clear();
+        txtIdPersona.clear();
+    }
+
+    private void mostrarMensaje(String mensaje) {
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+        alerta.setTitle("Información");
+        alerta.setHeaderText(null);
+        alerta.setContentText(mensaje);
+        alerta.showAndWait();
+    }
+
+    public void setController(BibliotecarioController controller) {
+        this.controller = controller;
     }
 }
