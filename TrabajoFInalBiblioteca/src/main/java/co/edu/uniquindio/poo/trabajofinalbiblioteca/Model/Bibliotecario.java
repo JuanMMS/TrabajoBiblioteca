@@ -46,8 +46,8 @@ public class Bibliotecario extends Empleado implements GestionLibro{
         List<Persona> listUsuariosConDeuda = new ArrayList<>();
 
         for (Prestamo prestamo : listPrestamosBibliotecario) {
-            reporte += prestamo.toString() + "\n";
-
+            reporte += "ID Prestamo: " + prestamo.getId() + "\nPersona a quien se presta: " + prestamo.getPersona().getNombre() + "\nPendiente devolver: " + prestamo.isDevuelto() + "\n\n";
+            /**
             // Obtener el libro más prestado por el bibliotecario
             if (prestamo.getLibro() instanceof LibroFisico) {
                 LibroFisico libro = (LibroFisico) prestamo.getLibro();
@@ -60,9 +60,10 @@ public class Bibliotecario extends Empleado implements GestionLibro{
             if (!prestamo.isDevuelto() && !listUsuariosConDeuda.contains(persona)) {
                 listUsuariosConDeuda.add(persona);
             }
+             */
         }
 
-        if (libroMasPrestado != null) {
+        /**if (libroMasPrestado != null) {
             reporte += "\nLibro más prestado: " + libroMasPrestado.getTitulo() +
                     " (" + libroMasPrestado.getVecesPrestado() + " veces)\n";
         } else {
@@ -75,7 +76,7 @@ public class Bibliotecario extends Empleado implements GestionLibro{
             for (Persona persona : listUsuariosConDeuda) {
                 reporte += "- " + persona.getNombre() + "\n";
             }
-        }
+        }*/
         return reporte;
     }
 
